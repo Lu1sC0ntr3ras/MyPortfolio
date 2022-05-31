@@ -8,6 +8,7 @@ export default function Home() {
         <link rel="icon" href="/Logo.png" />
       </Head>
     <h1>Hello, my name is Luis and this page is my future portfolio 😀</h1>
+    <h2>Ok, this change my session commit NOW</h2>
     </div>
   )
 }
