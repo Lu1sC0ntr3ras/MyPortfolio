@@ -1,0 +1,59 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es2021": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "standard",
+    "next/core-web-vitals",
+    "eslint:recommended", 
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "settings": {
+    "react": {
+      "version": "18"
+    }
+  },
+  "overrides": [],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "tsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "rules": {
+    "global-require": "off",
+    "newline-per-chained-call": "off",
+    "import/no-dynamic-require": "off",
+    "no-multi-spaces": ["error"], // No permitir espacios múltiples
+    "no-trailing-spaces": ["error"], // No permitir espacios en blanco al final de la línea
+    "no-multiple-empty-lines": ["error", { "max": 1 }], // Permitir un máximo de un salto de línea
+    "quotes": ["error", "single", { "allowTemplateLiterals": true }],
+    "eol-last": ["error", "always"],
+    "semi": ["error", "always"],
+    "semi-spacing": ["error", { "before": false, "after": true }],
+    "semi-style": ["error", "last"],
+    "class-methods-use-this": "off",
+    "indent": ["error", 2],
+    "@typescript-eslint/member-delimiter-style": [
+      "error",
+      {
+        "multiline": {
+          "delimiter": "semi",
+          "requireLast": true
+        },
+        "singleline": {
+          "delimiter": "semi",
+          "requireLast": true
+        }
+      }
+    ]
+  },
+  "globals": {
+    "JSX": true
+  }
+}
