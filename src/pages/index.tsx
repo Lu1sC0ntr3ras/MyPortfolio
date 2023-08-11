@@ -1,11 +1,14 @@
-import { NextPage } from 'next';
-import { Fragment } from 'react';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 
-const Home: NextPage = () => {
+const Home = () => {
+  const router = useRouter();
+  useEffect(() => {
+    router.push('/home');
+  }, [router]);
+
   return (
-    <Fragment>
-      <h1>Hello world testing</h1>
-    </Fragment>
+    <></>
   );
 };
 
