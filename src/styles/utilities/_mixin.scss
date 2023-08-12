@@ -1,0 +1,75 @@
+@mixin box($width: auto, $height: auto, $background: transparent, $padding: 0, $margin: 0) {
+  width: $width;
+  height: $height;
+  background: $background;
+  padding: $padding;
+  margin: $margin;
+}
+
+@mixin grid-content($areas, $columns, $rows, $gap: 0) {
+  display: grid;
+  grid-template-areas: $areas;
+  grid-template-columns: $columns;
+  grid-template-rows: $rows;
+  gap: $gap;
+}
+
+@mixin flex-content($flex-direction: row, $justify-content: flex-start, $align-items: flex-start, $gap: 0) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  gap: $gap;
+}
+
+@mixin position($position, $top, $right, $bottom, $left, $z-index) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  z-index: $z-index;
+}
+
+@mixin paragraph($font-size, $font-weight, $color, $margin: 0, $padding: 0) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  color: $color;
+  margin: $margin;
+  padding: $padding;
+}
+
+@mixin paragraph-ellispsis($max-width) {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: $max-width;
+}
+
+@mixin border($border-width: 0px 0px 0px 0px, $border-color: white white white white, $border-radius: 0px) {
+  border-width: $border-width;
+  border-style: solid;
+  border-color: $border-color;
+  border-radius: $border-radius;
+}
+
+@mixin text($font-size: 12px, $font-family: 400, $color: black) {
+  font-size: $font-size;
+  font-family: $font-family;
+  color: $color;
+}
+
+@mixin animation(
+  $animation-name: "",
+  $animation-duration: 0.1s,
+  $animation-timing-function: ease-in-out,
+  $animation-fill-mode: forwards,
+  $animation-direction: linear
+) {
+  -webkit-animation-name: $animation-name;
+  animation-name: $animation-name;
+  animation-duration: $animation-duration;
+  animation-timing-function: $animation-timing-function;
+  animation-fill-mode: $animation-fill-mode;
+  animation-direction: $animation-direction;
+}
