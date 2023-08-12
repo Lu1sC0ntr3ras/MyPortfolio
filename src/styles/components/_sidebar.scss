@@ -1,36 +1,22 @@
 @import "../utilities/index.scss";
 .container_sidebar {
+  @include flex-content(row, space-between, flex-start, center);
+  @include box(100%, 100%, transparent, 0, 0);
   position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
 
   .left_bar {
-    width: 50%;
-    height: 100%;
-    left: -46%;
+    @include box(50%, 100%, url("../../../public/assets/Vector\ 2.png"), 0, 0);
+    @include animation($open_left_bar, 1s, ease-in-out, forwards);
     position: relative;
-    background: url("../../../public/assets/Vector\ 2.png");
+    left: -46%;
     background-size: cover;
     background-repeat: no-repeat;
 
-    animation-name: open_left_bar;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-    
-
     .left_bar_text {
-      height: 100%;
-      width: 100%;
+      @include box(100%, 100%, transparent, 5% 0% 0% 5%);
+      @include flex-content(column, flex-start, flex-start, calc(10%));
       position: absolute;
-      display: flex;
-      flex-direction: column;
-      padding-top: 5%;
-      padding-left: 5%;
       color: white;
-      gap: calc(10%);
       p {
         font-size: 24px;
         font-family: $SpaceModo_Bold;
@@ -43,9 +29,7 @@
       }
 
       .sidebar_left_options {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
+        @include flex-content(column, flex-start, flex-start, 25px);
         .sidebar_option {
           font-size: 20px;
           cursor: pointer;
@@ -54,44 +38,25 @@
     }
   }
 
-  .left_bar_closed{
+  .left_bar_closed {
     @extend .left_bar;
-    animation-name: close_left_bar;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+    @include animation($close_left_bar, 1s, ease-in-out, forwards);
   }
 
   .right_bar {
+    @include box(4%, 100%, url("../../../public/assets/Vector\ 3.png"), 0, 0);
+    @include animation($open_right_bar, 1s, ease-in-out, forwards);
     align-self: flex-end;
-    width: 4%;
-    height: 100%;
     position: relative;
-    background: url("../../../public/assets/Vector\ 3.png");
     background-size: cover;
     background-repeat: no-repeat;
 
-    animation-name: open_right_bar;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-
     .right_bar_text {
-      display: flex;
-      height: 100%;
-      width: 100%;
-      color: white;
-      padding-right: 5%;
-      gap: 25px;
+      @include box(100%, 100%, transparent, 0% 5% 0% 0%);
+      @include flex-content(column, center, flex-end, 25px);
       position: absolute;
-      text-align: right;
-      flex-direction: column;
-      justify-content: center;
-
-      animation-name: open_right_bar_text;
-      animation-duration: 1s;
-      animation-timing-function: ease-in-out;
-      animation-fill-mode: forwards;
+      color: white;
+      @include animation($open_right_bar_text, 1s, ease-in-out, forwards);
 
       p {
         cursor: pointer;
@@ -100,21 +65,23 @@
       }
     }
 
-    .right_bar_text_close{
+    .right_bar_text_close {
       @extend .right_bar_text;
-      animation-name: close_right_bar_text;
-      animation-duration: 1s;
-      animation-timing-function: ease-in-out;
-      animation-fill-mode: forwards;
+      @include animation($close_right_bar_text, 1s, ease-in-out, forwards);
     }
   }
 
-  .right_bar_closed{
+  .right_bar_closed {
     @extend .right_bar;
     animation-name: close_right_bar;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
+  }
+
+  .first_status_right_bar {
+    @extend .right_bar_closed;
+    animation: none;
   }
 
   .open_right_bar {
@@ -123,6 +90,7 @@
     width: 8%;
     height: 50%;
     z-index: 10;
+    cursor: pointer;
   }
 }
 
@@ -145,71 +113,4 @@
 }
 .reverse {
   animation-direction: "reverse";
-}
-
-@keyframes open_left_bar {
-  0% {
-    left: -46%;
-  }
-  100% {
-    left: 0%;
-  }
-}
-
-@keyframes open_right_bar {
-  0% {
-    width: 4%;
-  }
-  100% {
-    width: 50%;
-  }
-}
-
-@keyframes open_right_bar_text {
-  0% {
-    display: none;
-    opacity: 0;
-  }
-  50%{
-    display: none;
-  }
-  75%{
-    display: none;
-  }
-  100% {
-    opacity: 1;
-    display: flex;
-  }
-}
-
-@keyframes close_left_bar {
-  0% {
-    left: 0%;
-  }
-  100% {
-    left: -46%;
-  }
-}
-
-@keyframes close_right_bar {
-  0% {
-    width: 50%;
-  }
-  100% {
-    width: 4%;
-  }
-}
-
-@keyframes close_right_bar_text {
-  0% {
-    display: flex;
-    opacity: 1;
-  }
-  50%{
-    display: none;
-  }
-  100% {
-    opacity: 0;
-    display: none;
-  }
 }

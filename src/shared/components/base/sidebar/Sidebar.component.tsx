@@ -8,6 +8,7 @@ const Sidebar: FC<ISidebar> = ({ leftOptions, rightOptions, subtitle, title }) =
   const [leftOption, setLeftOption] = useState<string>('');
   const [rightOption, setRightOption] = useState<ISidebarRightOption[]>([]);
   const first = useRef<boolean>(true);
+  const second = useRef<boolean>(true);
   const router = useRouter();
 
   useEffect(() => {
@@ -48,6 +49,7 @@ const Sidebar: FC<ISidebar> = ({ leftOptions, rightOptions, subtitle, title }) =
                   } else {
                     setLeftOption(opt.route ?? '');
                     setRightOption(rightOptions[opt.leftOptions]);
+                    second.current = false;
                   }
                 }}
               >
@@ -61,7 +63,13 @@ const Sidebar: FC<ISidebar> = ({ leftOptions, rightOptions, subtitle, title }) =
           </div>
         </div>
       </div>
-      <div className={`${rightOption.length ? 'right_bar' : 'right_bar_closed'}`} >
+      <div className={`${
+        second.current && !rightOption.length
+          ? 'first_status_right_bar'
+          : rightOption.length && open
+            ? 'right_bar'
+            : 'right_bar_closed'
+      }`} >
         <div className={rightOption.length && open ? 'right_bar_text' : 'right_bar_text_close'}
           style={{
             display: rightOption.length && open ? 'flex' : 'none'
