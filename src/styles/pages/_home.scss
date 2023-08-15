@@ -1,0 +1,10 @@
+@import "../utilities/index.scss";
+
+.home_container_text{
+  @include box(50%, auto, transparent, 30px);
+  @include flex-content(column, center, center, 25px);
+  text-align: justify;
+  .title {
+    text-align: center;
+  }
+}

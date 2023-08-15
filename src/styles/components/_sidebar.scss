@@ -1,14 +1,41 @@
 @import "../utilities/index.scss";
+
+.sidebar_light {
+  @extend .container_sidebar;
+  p {
+    color: #17202a;
+  }
+  .left_bar {
+    @include box(45%, 100%, linear-gradient(#f8f9f9, #f2f4f4), 0, 0);
+
+    .left_bar_text 
+    .sidebar_left_titles {
+      .sidebar_title{
+        @extend %neon_dark_blue;
+      }
+      
+    }
+  }
+  .left_bar::after,
+  .left_bar::before {
+    background: black;
+    box-shadow: 0rem 0rem 0.3rem black;
+  }
+}
+
 .container_sidebar {
   @include flex-content(row, space-between, flex-start, center);
   @include box(100%, 100%, transparent, 0, 0);
   position: absolute;
+  overflow-x: hidden;
 
   .left_bar {
-    @include box(50%, 100%, url("../../../public/assets/Vector\ 2.png"), 0, 0);
     @include animation($open_left_bar, 1s, ease-in-out, forwards);
     position: relative;
-    left: -46%;
+    z-index: 10;
+    left: -40%;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -16,7 +43,6 @@
       @include box(100%, 100%, transparent, 5% 0% 0% 5%);
       @include flex-content(column, flex-start, flex-start, calc(10%));
       position: absolute;
-      color: white;
       p {
         font-size: 24px;
         font-family: $SpaceModo_Bold;
@@ -38,16 +64,29 @@
     }
   }
 
+  .left_bar::after,
+  .left_bar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+  }
+
   .left_bar_closed {
     @extend .left_bar;
     @include animation($close_left_bar, 1s, ease-in-out, forwards);
+    position: 0;
   }
 
   .right_bar {
-    @include box(4%, 100%, url("../../../public/assets/Vector\ 3.png"), 0, 0);
+    @include box(45%, 100%, linear-gradient(#17202a, #0d1217), 0, 0);
     @include animation($open_right_bar, 1s, ease-in-out, forwards);
-    align-self: flex-end;
     position: relative;
+    z-index: 5;
+    right: -40%;
+    align-self: flex-end;
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -68,7 +107,22 @@
     .right_bar_text_close {
       @extend .right_bar_text;
       @include animation($close_right_bar_text, 1s, ease-in-out, forwards);
+      position: 0;
     }
+  }
+
+  .right_bar::after,
+  .right_bar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background: white;
+    box-shadow:
+      inset 0rem 0rem 0.3rem white,
+      0rem 0rem 0.3rem white;
   }
 
   .right_bar_closed {
@@ -81,15 +135,16 @@
 
   .first_status_right_bar {
     @extend .right_bar_closed;
+    z-index: 10;
     animation: none;
   }
 
   .open_right_bar {
     position: absolute;
     right: 0%;
-    width: 8%;
-    height: 50%;
-    z-index: 10;
+    width: 10%;
+    height: 100%;
+    z-index: 20;
     cursor: pointer;
   }
 }

@@ -1,14 +1,27 @@
 @import "main.scss";
+@import "utilities/index.scss";
 
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
   font-family: $SpaceModo_Regular;
+  color: white
 }
 
 body {
   position: relative;
+  background: transparent;
   height: 100vh;
   width: 100%;
+}
+
+.container_test {
+  border: 1px solid $dark_blue;
+  border-radius: 5px;
+  width: 80%;
+  height: 50px;
+  display: flex;
+  align-items: flex-start;
+  padding: 5px;
 }

@@ -1,0 +1,22 @@
+@import "../utilities/index.scss";
+
+.container_profile{
+  @include box(100%, 100%);
+  @include flex-content(row, center, center, 100px);
+
+  .profile_image{
+    @include box(200px, 200px, url('../../../public/assets/profile_image.png'));
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+    border: 2px solid lightseagreen;
+  }
+
+  .profile_text{
+    @include box(50%, auto);
+    @include flex-content(column, center, center, 20px);
+    .text{
+      text-align: justify;
+    }
+  }
+}

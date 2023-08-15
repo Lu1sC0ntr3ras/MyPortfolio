@@ -1,6 +1,6 @@
 @keyframes open_left_bar {
   0% {
-    left: -46%;
+    left: -40%;
   }
   100% {
     left: 0%;
@@ -9,10 +9,10 @@
 
 @keyframes open_right_bar {
   0% {
-    width: 4%;
+    right: -40%;
   }
   100% {
-    width: 50%;
+    right: 0%;
   }
 }
 
@@ -38,16 +38,16 @@
     left: 0%;
   }
   100% {
-    left: -46%;
+    left: -40%;
   }
 }
 
 @keyframes close_right_bar {
   0% {
-    width: 50%;
+    right: 0%;
   }
   100% {
-    width: 4%;
+    right: -40%;
   }
 }
 

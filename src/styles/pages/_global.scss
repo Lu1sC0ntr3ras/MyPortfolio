@@ -1,0 +1,12 @@
+@import "../utilities/index.scss";
+
+.container_page{
+  @include box(100%, 100vh);
+  @include flex-content(column, center, center)
+}
+
+.scroll_y {
+  overflow: auto;
+  justify-content: flex-start;
+  padding-top: 20px;
+}

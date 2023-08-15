@@ -1,0 +1,32 @@
+.neon_green {
+  text-shadow:
+  0 0 0.5rem lightgreen,
+}
+
+.neon_red {
+  text-shadow:
+  0 0 0.5rem lightseagreen,
+}
+
+.neon_blue_light{
+  text-shadow:
+  0 0 0.5rem lightblue,
+}
+
+.neon_white{
+  text-shadow:
+  0 0 0.2rem white,
+}
+
+.box_neon_white {
+  border: 2px solid white;
+  box-shadow: 
+  inset 0rem 0rem 0.3rem white,
+  0rem 0rem 0.3rem white;
+}
+
+.box_neon_light_blue{
+  box-shadow: 
+  inset 0rem 0rem 0.3rem lightseagreen,
+  0rem 0rem 0.3rem lightseagreen;
+}

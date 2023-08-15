@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import { NextPage } from 'next';
 import '../styles/global.scss';
 import Layout from '@/shared/components/base/layout/Layout.component';
+import ThemeState from '@/core/context/theme/ThemeState';
 
 export type NextPageWithLayout<P = object, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -34,7 +35,9 @@ export default function App ({ Component, pageProps }: AppPropsWithLayout) {
 
   return (
     <>
-      {getLayout(<Component {...pageProps} />)}
+      <ThemeState>
+        {getLayout(<Component {...pageProps} />)}
+      </ThemeState>
     </>
   );
 }
