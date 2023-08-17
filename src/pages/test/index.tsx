@@ -9,6 +9,9 @@ const Test: NextPage = () => {
       <div
         onClick={() => setOpen(!open)}
         style={{
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '20px',
           width: '100%',
           height: open ? 'auto' : 'auto',
           padding: '10px',
