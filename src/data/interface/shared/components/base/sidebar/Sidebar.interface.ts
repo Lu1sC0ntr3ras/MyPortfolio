@@ -16,7 +16,6 @@ export interface ISidebarLeft {
 export interface ISidebar {
   title: string;
   subtitle: string;
-  rightOptions: ISidebarLeft;
   leftOptions: ISidebarLeftOption[];
 }
 

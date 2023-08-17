@@ -11,8 +11,7 @@ const leftOptions: ISidebarLeftOption[] = [
   },
   {
     text: 'Education',
-    route: '/education',
-    leftOptions: 'education'
+    route: '/education'
   },
   {
     text: 'Experience',
@@ -20,8 +19,7 @@ const leftOptions: ISidebarLeftOption[] = [
   },
   {
     text: 'Skills',
-    route: '/skills',
-    leftOptions: 'skills'
+    route: '/skills'
   },
   {
     text: 'Languajes',
@@ -69,8 +67,7 @@ export const rightOptions: ISidebarLeft = {
 };
 
 export const sidebar: ISidebar = {
-  title: 'Luis Eduardo Contreras Mendez',
+  title: 'Lu1sC0ntr3ras',
   subtitle: 'Full Stack developer',
-  leftOptions,
-  rightOptions
+  leftOptions
 };

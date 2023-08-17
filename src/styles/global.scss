@@ -6,7 +6,6 @@
   padding: 0px;
   box-sizing: border-box;
   font-family: $SpaceModo_Regular;
-  color: white
 }
 
 body {
@@ -24,4 +23,5 @@ body {
   display: flex;
   align-items: flex-start;
   padding: 5px;
+  z-index: 0;
 }

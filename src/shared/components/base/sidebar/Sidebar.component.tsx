@@ -1,59 +1,50 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { FC, useEffect, useRef, useState } from 'react';
+import { FC, MouseEvent, useEffect, useRef, useState } from 'react';
 import { ISidebar, ISidebarLeftOption, ISidebarRightOption } from '@/data/interface/shared/components/base/sidebar/Sidebar.interface';
 import { useRouter } from 'next/router';
 import { useTheme } from '@/core/context/theme/ThemeState';
 
-const Sidebar: FC<ISidebar> = ({ leftOptions, rightOptions, subtitle, title }) => {
+const Sidebar: FC<ISidebar> = ({ leftOptions, subtitle, title }) => {
   const { theme } = useTheme();
   const [open, setOpen] = useState<boolean>(false);
   const [leftOption, setLeftOption] = useState<string>('');
-  const [rightOption, setRightOption] = useState<ISidebarRightOption[]>([]);
   const first = useRef<boolean>(true);
-  const second = useRef<boolean>(true);
   const router = useRouter();
 
   const openRightBar = (opt: ISidebarLeftOption): void => {
-    if (!opt.leftOptions) {
-      router.push(opt.route ?? '');
-      setLeftOption(opt.route ?? '');
-      setRightOption([]);
-      setOpen(false);
-    } else {
-      setLeftOption(opt.route ?? '');
-      setRightOption(rightOptions[opt.leftOptions]);
-      second.current = false;
-    }
+    setLeftOption(opt.route ?? '');
+    router.push(opt.route ?? '');
+    setOpen(false);
+  };
+
+  const openLeftBar = (event: MouseEvent) => {
+    event.stopPropagation();
+    setOpen(!open);
+    first.current = false;
   };
 
   useEffect(() => {
     setLeftOption(router.pathname);
-    const option = router.pathname.split('/')[1];
-    if (option && rightOptions[option]) setRightOption(rightOptions[option]);
   }, [router.pathname]);
 
   return (
-    <div className={`${first.current ? 'first_status_container_sidebar' : 'container_sidebar'} ${theme.sidebar_style}`} >
+    <div className={`${first.current ? 'first_sidebar' : open ? 'sidebar' : 'sidebar_bottom'}`} >
       <div className={open ? 'left_bar' : 'left_bar_closed'} >
-        <div className='open_right_bar'
-          onClick={(event) => {
-            event.stopPropagation();
-            setOpen(!open);
-            first.current = false;
-          }}
+        <div className='open_bar'
+          onClick={(event) => openLeftBar(event)}
         />
-        <div className='left_bar_text' >
-          <div className='sidebar_left_titles'>
-            <p className='sidebar_title' >{title}</p>
-            <p className='sidebar_subtitle' >{subtitle}</p>
+        <div className='left_text' >
+          <div className='container_left_titles'>
+            <p className='title_light'>{title}</p>
+            <p className='text_light' >{subtitle}</p>
           </div>
-          <div className='sidebar_left_options'>
+          <div className='options'>
             {leftOptions.map((opt, index) => {
               const active: boolean = opt.route === leftOption || router.pathname.includes(opt.route ?? '');
               return (
                 <p
                   key={index + opt.text}
-                  className={`sidebar_option ${active ? 'neon_green' : ''}`}
+                  className={`text_light`}
                   onClick={() => openRightBar(opt)}
                 >
                   {active ? `=>  ${opt.text} <=` : opt.text}
@@ -63,7 +54,12 @@ const Sidebar: FC<ISidebar> = ({ leftOptions, rightOptions, subtitle, title }) =
           </div>
         </div>
       </div>
-      <div className={`${second.current && !rightOption.length ? 'first_status_right_bar' : rightOption.length && open ? 'right_bar' : 'right_bar_closed'}`} >
+      {/* <div className={`${second.current && !rightOption.length
+        ? 'first_right_bar'
+        : rightOption.length && open
+          ? 'right_bar'
+          : 'right_bar_closed'}`}
+      >
         <div className={rightOption.length && open ? 'right_bar_text' : 'right_bar_text_close'}
           style={{
             display: rightOption.length && open ? 'flex' : 'none'
@@ -75,7 +71,7 @@ const Sidebar: FC<ISidebar> = ({ leftOptions, rightOptions, subtitle, title }) =
               return (
                 <p
                   key={index + opt.text}
-                  className={active ? 'neon_green' : ''}
+                  className={`text_light`}
                   onClick={() => {
                     router.push(`${opt.route}`);
                     setOpen(false);
@@ -87,7 +83,7 @@ const Sidebar: FC<ISidebar> = ({ leftOptions, rightOptions, subtitle, title }) =
             })
           }
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

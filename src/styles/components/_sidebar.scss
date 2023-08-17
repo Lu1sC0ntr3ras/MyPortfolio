@@ -1,64 +1,37 @@
 @import "../utilities/index.scss";
 
-.sidebar_light {
-  @extend .container_sidebar;
-  p {
-    color: #17202a;
-  }
-  .left_bar {
-    @include box(45%, 100%, linear-gradient(#f8f9f9, #f2f4f4), 0, 0);
-
-    .left_bar_text 
-    .sidebar_left_titles {
-      .sidebar_title{
-        @extend %neon_dark_blue;
-      }
-      
-    }
-  }
-  .left_bar::after,
-  .left_bar::before {
-    background: black;
-    box-shadow: 0rem 0rem 0.3rem black;
-  }
-}
-
-.container_sidebar {
+.sidebar {
   @include flex-content(row, space-between, flex-start, center);
-  @include box(100%, 100%, transparent, 0, 0);
+  @include box(100%, 100%);
+  @include animation($move_top_z, 1s);
   position: absolute;
   overflow-x: hidden;
 
   .left_bar {
-    @include animation($open_left_bar, 1s, ease-in-out, forwards);
+    @include box(20%, 100%, $light_color);
+    @include animation($open_left_bar, 1s);
+    box-shadow: 0rem 0rem 0.3rem $dark_color;
     position: relative;
-    z-index: 10;
-    left: -40%;
-    border-top-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    .left_bar_text {
-      @include box(100%, 100%, transparent, 5% 0% 0% 5%);
-      @include flex-content(column, flex-start, flex-start, calc(10%));
-      position: absolute;
-      p {
-        font-size: 24px;
-        font-family: $SpaceModo_Bold;
-      }
-
-      .sidebar_left_titles {
-        .sidebar_subtitle {
-          font-family: $SpaceModo_Regular;
+    left: -15%;
+    z-index: 100;
+    .left_text {
+      @include box(auto, 100%, transparent, 20px);
+      @include flex-content(column, auto, auto, 50px);
+      .container_left_titles {
+        font-size: 20px;
+        .sidebar_title {
+          font-family: $SpaceModo_Bold;
         }
       }
-
-      .sidebar_left_options {
-        @include flex-content(column, flex-start, flex-start, 25px);
-        .sidebar_option {
+      .options {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        height: 100%;
+        justify-self: center;
+        .option {
           font-size: 20px;
-          cursor: pointer;
+          font-family: $SpaceModo_Bold;
         }
       }
     }
@@ -66,95 +39,28 @@
 
   .left_bar::after,
   .left_bar::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 1px;
-    height: 100%;
+    content: '';
+    @include position(absolute, 0, 0, auto, auto, 100);
   }
 
   .left_bar_closed {
     @extend .left_bar;
-    @include animation($close_left_bar, 1s, ease-in-out, forwards);
-    position: 0;
+    @include animation($close_left_bar, 1s);
   }
 
-  .right_bar {
-    @include box(45%, 100%, linear-gradient(#17202a, #0d1217), 0, 0);
-    @include animation($open_right_bar, 1s, ease-in-out, forwards);
-    position: relative;
-    z-index: 5;
-    right: -40%;
-    align-self: flex-end;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    .right_bar_text {
-      @include box(100%, 100%, transparent, 0% 5% 0% 0%);
-      @include flex-content(column, center, flex-end, 25px);
-      position: absolute;
-      color: white;
-      @include animation($open_right_bar_text, 1s, ease-in-out, forwards);
-
-      p {
-        cursor: pointer;
-        font-size: 20px;
-        font-family: $SpaceModo_Bold;
-      }
-    }
-
-    .right_bar_text_close {
-      @extend .right_bar_text;
-      @include animation($close_right_bar_text, 1s, ease-in-out, forwards);
-      position: 0;
-    }
-  }
-
-  .right_bar::after,
-  .right_bar::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 1px;
-    height: 100%;
-    background: white;
-    box-shadow:
-      inset 0rem 0rem 0.3rem white,
-      0rem 0rem 0.3rem white;
-  }
-
-  .right_bar_closed {
-    @extend .right_bar;
-    animation-name: close_right_bar;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-  }
-
-  .first_status_right_bar {
-    @extend .right_bar_closed;
-    z-index: 10;
-    animation: none;
-  }
-
-  .open_right_bar {
-    position: absolute;
-    right: 0%;
-    width: 10%;
-    height: 100%;
-    z-index: 20;
+  .open_bar {
+    @include position(absolute, 0, 0, auto, auto, 4);
+    @include box(25%, 100%);
     cursor: pointer;
   }
 }
 
-.first_status_container_sidebar {
-  @extend .container_sidebar;
+.first_sidebar {
+  animation: none;
+  @extend .sidebar;
   .left_bar {
     animation: none;
   }
-
   .right_bar {
     animation: none;
     .right_bar_text {
@@ -163,9 +69,7 @@
   }
 }
 
-.no-animation {
-  animation: none;
-}
-.reverse {
-  animation-direction: "reverse";
+.sidebar_bottom {
+  @extend .sidebar;
+  @include animation($move_bottom_z, 1s);
 }

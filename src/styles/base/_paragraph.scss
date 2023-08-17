@@ -2,12 +2,37 @@
 
 .title{
   font-family: $SpaceModo_Bold;
-  z-index: 1;
   font-size: 20px;
+  z-index: 1;
 }
 
 .text{
   font-family: $SpaceModo_Regular;
   font-size: 18px;
   z-index: 1;
+}
+
+.title_dark{
+  @extend .title;
+  color: $light_color;
+}
+
+.title_light{
+  @extend .title;
+  color: $dark_color;
+}
+
+.text_dark{
+  @extend .text;
+  color: $light_color;
+}
+
+.text_light{
+  @extend .text;
+  color: $dark_color;
+}
+
+
+.justify {
+  text-align: justify;
 }
