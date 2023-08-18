@@ -4,6 +4,7 @@ export interface IThemeStyles {
   body_style: 'body_light' | 'body_dark';
   sidebar_style: 'sidebar_light' | 'sidebar_dark';
   card_style: 'card_light' | 'card_dark';
+  color: string;
 }
 
 export interface IThemeContext {

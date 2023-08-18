@@ -6,7 +6,8 @@ export const initialState: IThemeContext = {
   theme: {
     body_style: 'body_light',
     card_style: 'card_light',
-    sidebar_style: 'sidebar_light'
+    sidebar_style: 'sidebar_light',
+    color: '#FFFFFF'
   },
   updateTheme: () => {}
 };

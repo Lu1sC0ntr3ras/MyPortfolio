@@ -1,7 +1,10 @@
+import { useTheme } from '@/core/context/theme/ThemeState';
+import { ArrowBottom, ArrowTop } from '@/shared/components/global/svg/svg.component';
 import { NextPage } from 'next';
 import { useState } from 'react';
 
 const Test: NextPage = () => {
+  const theme = useTheme();
   const [open, setOpen] = useState<boolean>(false);
   return (
     <div className='page_light scroll_y'>
@@ -11,7 +14,7 @@ const Test: NextPage = () => {
         style={{
           display: 'flex',
           flexDirection: 'column',
-          gap: '20px',
+          gap: '10px',
           width: '100%',
           height: open ? 'auto' : 'auto',
           padding: '10px',
@@ -27,7 +30,10 @@ const Test: NextPage = () => {
           }}
         >
           <p className='title'>{' Test title '}</p>
-          <p className='title'>{open ? '⇑' : '⇓'}</p>
+          { open
+            ? <ArrowTop />
+            : <ArrowBottom />
+          }
         </div>
         {
           open
@@ -38,7 +44,12 @@ const Test: NextPage = () => {
                 height: '200px'
               }}
             >
+              <div >
 
+              </div>
+              <div>
+
+              </div>
             </div>
             : null
         }

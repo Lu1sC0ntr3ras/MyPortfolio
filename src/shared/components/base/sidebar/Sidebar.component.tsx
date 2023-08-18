@@ -1,11 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { FC, MouseEvent, useEffect, useRef, useState } from 'react';
-import { ISidebar, ISidebarLeftOption, ISidebarRightOption } from '@/data/interface/shared/components/base/sidebar/Sidebar.interface';
+import { ISidebar, ISidebarLeftOption } from '@/data/interface/shared/components/base/sidebar/Sidebar.interface';
 import { useRouter } from 'next/router';
-import { useTheme } from '@/core/context/theme/ThemeState';
 
 const Sidebar: FC<ISidebar> = ({ leftOptions, subtitle, title }) => {
-  const { theme } = useTheme();
   const [open, setOpen] = useState<boolean>(false);
   const [leftOption, setLeftOption] = useState<string>('');
   const first = useRef<boolean>(true);
@@ -28,6 +26,7 @@ const Sidebar: FC<ISidebar> = ({ leftOptions, subtitle, title }) => {
   }, [router.pathname]);
 
   return (
+    // <div className={`${first.current ? 'first_sidebar' : 'sidebar'}`} >
     <div className={`${first.current ? 'first_sidebar' : open ? 'sidebar' : 'sidebar_bottom'}`} >
       <div className={open ? 'left_bar' : 'left_bar_closed'} >
         <div className='open_bar'
@@ -44,7 +43,7 @@ const Sidebar: FC<ISidebar> = ({ leftOptions, subtitle, title }) => {
               return (
                 <p
                   key={index + opt.text}
-                  className={`text_light`}
+                  className={`text_light pointer`}
                   onClick={() => openRightBar(opt)}
                 >
                   {active ? `=>  ${opt.text} <=` : opt.text}

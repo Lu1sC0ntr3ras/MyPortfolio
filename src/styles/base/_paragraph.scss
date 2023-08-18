@@ -1,38 +1,45 @@
 @import "../utilities/index.scss";
 
-.title{
+.title {
   font-family: $SpaceModo_Bold;
   font-size: 20px;
-  z-index: 1;
 }
 
-.text{
+.text {
   font-family: $SpaceModo_Regular;
   font-size: 18px;
-  z-index: 1;
 }
 
-.title_dark{
+.title_dark {
   @extend .title;
   color: $light_color;
 }
 
-.title_light{
+.title_light {
   @extend .title;
   color: $dark_color;
 }
 
-.text_dark{
+.text_dark {
   @extend .text;
   color: $light_color;
 }
 
-.text_light{
+.text_light {
   @extend .text;
   color: $dark_color;
 }
-
 
 .justify {
   text-align: justify;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+@for $i from 1 through $font-sizes {
+  .fs-#{$i} {
+    font-size: #{$i}px;
+  }
 }

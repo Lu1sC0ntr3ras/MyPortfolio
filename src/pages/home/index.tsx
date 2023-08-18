@@ -1,13 +1,20 @@
 import { NextPage } from 'next';
 
 const Home: NextPage = () => {
-  const title = 'Hello';
-  const subtitle = `Welcome, I'm Luis Eduardo Contreras Mendez, this is my portfolio, here you can explore my passion for technology and development, embodied in projects that I have created with dedication and enthusiasm. As a full stack developer, I have brought innovative ideas and solutions to life that span both front-end and back-end, and this portfolio is a reflection of my background and skills.`;
+  const title: string = 'Hi, I\'m Luis Eduardo Contreras Mendez';
+  const subtitle: JSX.Element = (
+    <>
+      {'A systems engineer from Colombia with knowledge in frontend and backend application development.'}
+      <br />
+      <br />
+      {'Browse and I hope we can get to know each other better.'}
+    </>
+  );
 
   return (
     <div className='page_light'>
-      <p className='title_light'>{title}</p>
-      <p className='text_light justify'>{subtitle}</p>
+      <p className='title_light fs-40'>{title}</p>
+      <p className='text_light justify fs-25'>{subtitle}</p>
     </div>
   );
 };

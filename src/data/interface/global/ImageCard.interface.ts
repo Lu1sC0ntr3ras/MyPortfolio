@@ -20,3 +20,9 @@ export interface ICard {
   description: string;
   image: string;
 }
+
+export interface ISvgConfig {
+  width?: string;
+  height?: string;
+  fill?: string;
+}

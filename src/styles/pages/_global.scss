@@ -3,6 +3,7 @@
 .page {
   @include box(100%, 100vh);
   @include flex-content(column, auto, auto);
+  position: relative;
   padding: 2% 3% 2% 8%;
   z-index: 1;
 }
@@ -18,7 +19,8 @@
 }
 
 .scroll_y {
-  overflow: auto;
   justify-content: flex-start;
-  padding-top: 20px;
+  // padding-top: 20px;
+  overflow-y: scroll;
+  position: relative;
 }

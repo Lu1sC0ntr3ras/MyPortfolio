@@ -1,10 +1,10 @@
 @import "../utilities/index.scss";
 
 .sidebar {
+  position: absolute;
   @include flex-content(row, space-between, flex-start, center);
   @include box(100%, 100%);
   @include animation($move_top_z, 1s);
-  position: absolute;
   overflow-x: hidden;
 
   .left_bar {
@@ -49,7 +49,7 @@
   }
 
   .open_bar {
-    @include position(absolute, 0, 0, auto, auto, 4);
+    @include position(absolute, 0, 0, auto, auto, 100);
     @include box(25%, 100%);
     cursor: pointer;
   }
@@ -58,6 +58,7 @@
 .first_sidebar {
   animation: none;
   @extend .sidebar;
+  position: 1;
   .left_bar {
     animation: none;
   }
