@@ -2,7 +2,7 @@
 
 .page {
   @include box(100%, 100vh);
-  @include flex-content(column, auto, auto);
+  @include flex-content(column, auto, auto, 10px);
   position: relative;
   padding: 2% 3% 2% 8%;
   z-index: 1;

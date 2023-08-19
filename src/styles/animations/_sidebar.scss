@@ -1,6 +1,6 @@
 @keyframes open_left_bar {
   0% {
-    left: -15%;
+    left: -200px;
   }
   100% {
     left: 0%;
@@ -12,30 +12,6 @@
     left: 0%;
   }
   100% {
-    left: -15%;
-  }
-}
-
-@keyframes move_bottom_z{
-  0% {
-    z-index: 10;
-  }
-  50%{
-    z-index: 10;
-  }
-  100%{
-    z-index: 2;
-  }
-}
-
-@keyframes move_top_z{
-  0% {
-    z-index: 2;
-  }
-  50%{
-    z-index: 10;
-  }
-  100%{
-    z-index: 10;
+    left: -200px;
   }
 }

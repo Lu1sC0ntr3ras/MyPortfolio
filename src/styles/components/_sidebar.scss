@@ -1,76 +1,46 @@
 @import "../utilities/index.scss";
 
-.sidebar {
-  position: absolute;
-  @include flex-content(row, space-between, flex-start, center);
-  @include box(100%, 100%);
-  @include animation($move_top_z, 1s);
-  overflow-x: hidden;
-
-  .left_bar {
-    @include box(20%, 100%, $light_color);
-    @include animation($open_left_bar, 1s);
-    box-shadow: 0rem 0rem 0.3rem $dark_color;
-    position: relative;
-    left: -15%;
-    z-index: 100;
-    .left_text {
-      @include box(auto, 100%, transparent, 20px);
-      @include flex-content(column, auto, auto, 50px);
-      .container_left_titles {
+.left_bar {
+  @include box(250px, 100%, $light_color);
+  @include animation($open_left_bar, 1s);
+  position: fixed;
+  box-shadow: 0rem 0rem 0.3rem $dark_color;
+  left: -200px;
+  z-index: 100;
+  .left_text {
+    @include box(auto, 100%, transparent, 20px);
+    @include flex-content(column, auto, auto, 50px);
+    .container_left_titles {
+      font-size: 20px;
+      .sidebar_title {
+        font-family: $SpaceModo_Bold;
+      }
+    }
+    .options {
+      @include flex-content(column, flex-start, flex-start, 25px);
+      height: 100%;
+      justify-self: center;
+      .option {
         font-size: 20px;
-        .sidebar_title {
-          font-family: $SpaceModo_Bold;
-        }
-      }
-      .options {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-        height: 100%;
-        justify-self: center;
-        .option {
-          font-size: 20px;
-          font-family: $SpaceModo_Bold;
-        }
+        font-family: $SpaceModo_Bold;
       }
     }
   }
-
-  .left_bar::after,
-  .left_bar::before {
-    content: '';
-    @include position(absolute, 0, 0, auto, auto, 100);
-  }
-
-  .left_bar_closed {
-    @extend .left_bar;
-    @include animation($close_left_bar, 1s);
-  }
-
-  .open_bar {
-    @include position(absolute, 0, 0, auto, auto, 100);
-    @include box(25%, 100%);
-    cursor: pointer;
-  }
 }
 
-.first_sidebar {
+.left_bar_closed {
+  @extend .left_bar;
+  @include animation($close_left_bar, 1s);
+  box-shadow: 0rem 0rem 0.3rem $dark_color;
+}
+
+.first_left_bar {
+  @extend .left_bar;
   animation: none;
-  @extend .sidebar;
-  position: 1;
-  .left_bar {
-    animation: none;
-  }
-  .right_bar {
-    animation: none;
-    .right_bar_text {
-      animation: none;
-    }
-  }
 }
 
-.sidebar_bottom {
-  @extend .sidebar;
-  @include animation($move_bottom_z, 1s);
+.open_bar {
+  @include position(absolute, 0, 0, auto, auto, 100);
+  @include box(25%, 100%);
+  cursor: pointer;
 }
