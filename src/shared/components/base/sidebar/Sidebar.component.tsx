@@ -32,8 +32,8 @@ const Sidebar: FC<ISidebar> = ({ leftOptions, subtitle, title }) => {
       />
       <div className='left_text' >
         <div className='container_left_titles'>
-          <p className='title_light'>{title}</p>
-          <p className='text_light' >{subtitle}</p>
+          <p className={`title_light ${open ? 'appear' : 'vanish'}`}>{title}</p>
+          <p className={`text_light italic ${open ? 'appear' : 'vanish'}`} >{subtitle}</p>
         </div>
         <div className='options'>
           {leftOptions.map((opt, index) => {
@@ -41,7 +41,7 @@ const Sidebar: FC<ISidebar> = ({ leftOptions, subtitle, title }) => {
             return (
               <p
                 key={index + opt.text}
-                className={`text_light pointer`}
+                className={`text_light pointer ${open ? 'appear' : 'vanish'}`}
                 onClick={() => openRightBar(opt)}
               >
                 {active ? `=>  ${opt.text} <=` : opt.text}

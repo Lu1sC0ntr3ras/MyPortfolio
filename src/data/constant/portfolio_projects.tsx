@@ -23,16 +23,30 @@ export const projects: IProjects = {
       image: 'tekneo_image',
       text: (
         <>
+          <p className="fs-12">
+            {`
+            Home automation project, to manage the control and access of people to a work 
+            environment, with levels, floors, and doors, access can be controlled with QR 
+            codes, and face reader.
+            `}
+          </p>
         </>
       ),
       year: [2022],
       technologies: ['HTML', 'CSS', 'TypeScript', 'React', 'Next Js', 'Sass', 'Node Js']
     },
     {
-      name: 'Node Maker',
+      name: 'Node Maker (Frontend)',
       image: 'node_maker_image',
       text: (
         <>
+          <p className="fs-12">
+            {`
+              An application to create connections between KNX and MQTT sources, we can 
+              connect them with routing and data filters, save data in InfluxDb databases, 
+              monitoring the data that passes between each of the sources.
+            `}
+          </p>
         </>
       ),
       year: [2022],
@@ -43,6 +57,14 @@ export const projects: IProjects = {
       image: 'node_maker_image',
       text: (
         <>
+          <p className="fs-12">
+            {`
+            Application in charge of handling the data and making the connections and movement 
+            of data between the KNX and MQTT sources, it is in charge of saving the data that 
+            we want in the non-relational InfluxDB database, and sends this data to the Frontend 
+            applications.
+            `}
+          </p>
         </>
       ),
       year: [2023],
@@ -53,6 +75,13 @@ export const projects: IProjects = {
       image: 'device_manager_image',
       text: (
         <>
+          <p className="fs-12">
+            {`
+            Mobile application for managing home automation equipment, access control through 
+            doors with FRID cards, temperature control, air conditioning management and 
+            temperature and presence sensors with different types of frequencies.
+            `}
+          </p>
         </>
       ),
       year: [2022],

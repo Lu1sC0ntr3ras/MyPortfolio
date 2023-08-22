@@ -11,7 +11,7 @@ const leftOptions: ISidebarLeftOption[] = [
   },
   {
     text: 'About me',
-    route: '/about'
+    route: '/about-me'
   },
   {
     text: 'Skills',

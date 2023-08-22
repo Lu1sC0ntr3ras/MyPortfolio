@@ -44,3 +44,11 @@
   @include box(25%, 100%);
   cursor: pointer;
 }
+
+.appear{
+  @include animation($appear_text, 1s);
+}
+
+.vanish{
+  @include animation($vanish_text, 0.5s);
+}

@@ -1,0 +1,7 @@
+.profile_image{
+  @include box(100px, 100px, url('../../../public/assets/profile_image.png'));
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  border: 5px solid #333333;
+}

@@ -10,6 +10,16 @@
   font-size: 18px;
 }
 
+.italic{
+  font-family: $SpaceModo_Italic;
+  font-size: 18px;
+}
+
+.bold_italic{
+  font-family: $SpaceModo_BoldItalic;
+  font-size: 20px;
+}
+
 .title_dark {
   @extend .title;
   color: $light_color;
