@@ -1,3 +1,4 @@
+import CircularProgressBar from '@/shared/components/global/circularProgressBar/CircularProgressBar.component';
 import { NextPage } from 'next';
 
 const Skills: NextPage = () => {
@@ -12,6 +13,7 @@ const Skills: NextPage = () => {
           available in all my work. 
         `}
       </p>
+      <CircularProgressBar percentage={95} />
     </div>
   );
 };
