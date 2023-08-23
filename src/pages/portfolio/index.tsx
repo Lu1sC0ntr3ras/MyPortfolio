@@ -1,5 +1,6 @@
 import { useTheme } from '@/core/context/theme/ThemeState';
 import { projects } from '@/data/constant/portfolio_projects';
+import ProjectCard from '@/shared/components/global/project-card/ProjectCard.component';
 import { NextPage } from 'next';
 
 const Portfolio: NextPage = () => {
@@ -54,29 +55,29 @@ const Portfolio: NextPage = () => {
         {
           projects.projects.map((obj, index) => {
             return (
-              <div
-                style={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  width: '100%',
-                  minHeight: '50px',
-                  height: 'auto',
-                  gap: '10px'
-                }}
-                key={index}
-              >
-                <p className={`${theme.title} fs-16`}>{obj.name}</p>
-                <p className={`${theme.title} italic fs-12`}>{obj.year.join('')}</p>
-                <p className={`${theme.text}`}>{obj.text}</p>
-                <Buttons data={obj.technologies} />
-                <hr
-                  style={{
-                    border: 'none',
-                    borderBottom: `1px solid ${theme.color}`,
-                    boxShadow: `0rem 0.1rem 0.2rem ${theme.color}`
-                  }}
-                />
-              </div>
+              // <div
+              //   style={{
+              //     display: 'flex',
+              //     flexDirection: 'column',
+              //     width: '100%',
+              //     minHeight: '50px',
+              //     height: 'auto',
+              //     gap: '10px'
+              //   }}
+              //   key={index}
+              // >
+              //   <p className={`${theme.title} fs-16`}>{obj.name}</p>
+              //   <p className={`${theme.title} italic fs-12`}>{obj.year.join('')}</p>
+              //   <p className={`${theme.text}`}>{obj.text}</p>
+              //   <Buttons data={obj.technologies} />
+              //   <hr
+              //     style={{
+              //       border: 'none',
+              //       borderBottom: `1px solid ${theme.color}`,
+              //       boxShadow: `0rem 0.1rem 0.2rem ${theme.color}`
+              //     }}
+              //   />
+              // </div>
             );
           })
         }

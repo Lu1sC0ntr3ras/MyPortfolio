@@ -1,0 +1,14 @@
+@import "../utilities/index.scss";
+
+.project_card {
+  @include flex-content(column, auto, auto, 10px);
+  width: 100%;
+  min-height: 50px;
+}
+
+.box_technology {
+  width: fixed;
+  padding: 0px 3px;
+  cursor: pointer;
+  border-radius: 2px;
+}

@@ -1,5 +1,5 @@
 import { useTheme } from '@/core/context/theme/ThemeState';
-import CircularProgressBar from '@/shared/components/global/circularProgressBar/CircularProgressBar.component';
+import CircularProgressBar from '@/shared/components/global/circular-progress-bar/CircularProgressBar.component';
 import { Angular, CSS, HTML5, JavaScript, NestJs, NextJS, NodeJs, React as Rct, SQL, Sass, TypeScript } from '@/shared/components/global/icons/icons.component';
 import { NextPage } from 'next';
 
