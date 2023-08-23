@@ -4,10 +4,13 @@ import { Context, createContext } from 'react';
 export const initialState: IThemeContext = {
   darkMode: false,
   theme: {
-    body_style: 'body_light',
+    background: '#FFFFFF',
+    page: 'page_light',
     card_style: 'card_light',
+    color: '#333333',
     sidebar_style: 'sidebar_light',
-    color: '#FFFFFF'
+    text: 'text_light',
+    title: 'title_light'
   },
   updateTheme: () => {}
 };

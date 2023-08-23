@@ -1,9 +1,11 @@
+import { useTheme } from '@/core/context/theme/ThemeState';
 import { NextPage } from 'next';
 
 const Home: NextPage = () => {
+  const { theme: { page, text, title } } = useTheme();
   return (
-    <div>
-      <h1>Hello Luis</h1>
+    <div className={`${page}`}>
+      <p className={`${title}`}>{'Certifications'}</p>
     </div>
   );
 };

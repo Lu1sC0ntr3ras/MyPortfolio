@@ -4,7 +4,7 @@
   @include box(100%, 100vh);
   @include flex-content(column, auto, auto, 10px);
   position: relative;
-  padding: 2% 3% 2% 8%;
+  padding: 2% 3% 2% calc(50px + 3%);
   z-index: 1;
 }
 

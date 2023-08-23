@@ -1,7 +1,10 @@
+import { useTheme } from '@/core/context/theme/ThemeState';
 import { projects } from '@/data/constant/portfolio_projects';
 import { NextPage } from 'next';
 
 const Portfolio: NextPage = () => {
+  const { theme } = useTheme();
+
   const Buttons = ({ data }: { data: string[]; }): JSX.Element => {
     return (
       <div style={{ display: 'flex', gap: '10px' }} >
@@ -11,11 +14,11 @@ const Portfolio: NextPage = () => {
               <div
                 style={{
                   width: 'fixed',
-                  background: '#333333',
+                  background: theme.color,
                   padding: '0px 3px',
                   cursor: 'pointer',
                   borderRadius: '2px',
-                  color: 'white'
+                  color: theme.background
                 }}
                 key={len + index}
               >
@@ -29,9 +32,9 @@ const Portfolio: NextPage = () => {
   };
 
   return (
-    <div className='page_light'>
-      <p className={'title_light fs-30'}>{'PORTFOLIO'}</p>
-      <p className={'text fs-14'}>
+    <div className={`${theme.page} scroll_y`}>
+      <p className={`${theme.title}`}>{'Portfolio'}</p>
+      <p className={`${theme.text} fs-14`}>
         {`
           Everything I have done since I started working, in different projects, 
           evolving from putting and decorating every corner of a website, to managing 
@@ -62,15 +65,15 @@ const Portfolio: NextPage = () => {
                 }}
                 key={index}
               >
-                <p className='title fs-16'>{obj.name}</p>
-                <p className='italic fs-12'>{obj.year.join('')}</p>
-                <p>{obj.text}</p>
+                <p className={`${theme.title} fs-16`}>{obj.name}</p>
+                <p className={`${theme.title} italic fs-12`}>{obj.year.join('')}</p>
+                <p className={`${theme.text}`}>{obj.text}</p>
                 <Buttons data={obj.technologies} />
                 <hr
                   style={{
                     border: 'none',
-                    borderBottom: '1px solid #333333',
-                    boxShadow: '0rem 0.1rem 0.2rem #333333'
+                    borderBottom: `1px solid ${theme.color}`,
+                    boxShadow: `0rem 0.1rem 0.2rem ${theme.color}`
                   }}
                 />
               </div>

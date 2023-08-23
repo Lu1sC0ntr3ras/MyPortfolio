@@ -1,34 +1,35 @@
+@import "../utilities/index.scss";
+
 .circular-progress {
-  border: 1px solid red;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-content(column, center, center, 10px);
   
-
-  .circle {
-    transform: rotate(-90deg);
-    width: 100px;
-    height: 100px;
-    transform-origin: 50% 50%;
-  }
-
-  .circle-background {
-    fill: none;
-    stroke: #f2f2f2;
-    stroke-width: 8;
-  }
-
-  .circle-progress {
-    fill: none;
-    stroke: #3498db;
-    stroke-width: 8;
-    stroke-linecap: round;
-    transition: stroke-dashoffset 0.3s ease;
+  .container-circle{
+    position: relative;
+    @include flex-content(column, center, center);
+    .icon {
+      position: absolute;
+      @include flex-content(column, center, center);
+      @include box(50px, 50px);
+    }
+    .circle {
+      transform: rotate(-90deg);
+      @include box(90px, 90px);
+    }
+  
+    .circle-background {
+      fill: none;
+      stroke-width: 8;
+    }
+  
+    .circle-progress {
+      fill: none;
+      stroke-width: 8;
+      stroke-linecap: butt;
+      transition: stroke-dashoffset 3s ease;
+    }
   }
 
   .percentage {
     font-size: 16px;
-    font-weight: bold;
-    color: #3498db;
   }
 }

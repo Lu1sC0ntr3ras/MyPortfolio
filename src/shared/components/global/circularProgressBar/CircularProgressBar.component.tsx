@@ -1,29 +1,47 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 interface CircularProgressBarProps {
+  icon?: ReactNode;
   percentage: number;
+  stroke?: string;
+  title: string;
+  color?: string;
 }
 
-const CircularProgressBar: React.FC<CircularProgressBarProps> = ({ percentage }) => {
-  const radius = 40; // Radio del círculo
-  const circumference = 2 * Math.PI * radius; // Circunferencia del círculo
+const CircularProgressBar: React.FC<CircularProgressBarProps> = ({
+  color = '#333',
+  icon = <></>,
+  percentage,
+  stroke = color ?? '#333',
+  title
+}) => {
+  const radius = 40;
+  const circumference = 2 * Math.PI * radius;
 
-  const progressOffset = circumference - (percentage / 100) * circumference;
+  const progressOffset = percentage > 100
+    ? 0
+    : circumference - (percentage / 100) * circumference;
 
   return (
     <div className="circular-progress">
-      <div>
+      <p className='title_light fs-16' style={{ color }}>{title ?? 'example'}</p>
+      <div className="container-circle">
+        <div className='icon'>
+          {icon}
+        </div>
         <svg className="circle">
           <circle
             className="circle-background"
-            cx={radius + 4}
-            cy={radius + 4}
+            style={{ stroke, opacity: 0.2 }}
+            cx={radius + 5}
+            cy={radius + 5}
             r={radius}
           />
           <circle
             className="circle-progress"
-            cx={radius + 4}
-            cy={radius + 4}
+            style={{ stroke, opacity: 0.5 }}
+            cx={radius + 5}
+            cy={radius + 5}
             r={radius}
             strokeDasharray={circumference}
             strokeDashoffset={progressOffset}
@@ -31,7 +49,9 @@ const CircularProgressBar: React.FC<CircularProgressBarProps> = ({ percentage })
         </svg>
       </div>
       <div className="percentage">
-        {percentage}%
+        <p className='title_light fs-16 ' style={{ color }}>
+          {`${percentage > 100 ? 100 : percentage}%`}
+        </p>
       </div>
     </div>
   );

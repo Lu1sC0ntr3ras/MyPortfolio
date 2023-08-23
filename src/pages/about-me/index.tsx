@@ -1,9 +1,12 @@
+import { useTheme } from '@/core/context/theme/ThemeState';
 import { NextPage } from 'next';
 
 const AboutMe: NextPage = () => {
+  const { theme: { page, title, text, color } } = useTheme();
+
   return (
-    <div className='page_light'>
-      <p className='title fs-20'>{'Who am I?'}</p>
+    <div className={page}>
+      <p className={`${title} fs-20`}>{'Who am I?'}</p>
       <div
         style={{
           display: 'flex',
@@ -12,11 +15,11 @@ const AboutMe: NextPage = () => {
           gap: '20px'
         }}
       >
-        <div className='profile_image'/>
+        <div className='profile_image' style={{ borderColor: color }}/>
         <div
           style={{ textAlign: 'justify' }}
         >
-          <p>
+          <p className={text}>
             {`
             I always seek to improve myself, I consider that programming is my field
             of work, because I love everything that requires solving problems of logic

@@ -7,8 +7,8 @@ import { ThemeContext, initialState } from './ThemeContext';
 const ThemeState: NextPage<IThemeState> = ({ children }) => {
   const [state, dispatch] = useReducer(themeReducer, initialState);
 
-  const updateTheme = (light: boolean) => {
-    dispatch({ type: 'CHANGE_THEME', payload: light });
+  const updateTheme = () => {
+    dispatch({ type: 'CHANGE_THEME', payload: !state.darkMode });
   };
 
   const value: IThemeContext = {
@@ -21,13 +21,12 @@ const ThemeState: NextPage<IThemeState> = ({ children }) => {
     <ThemeContext.Provider value={value}>
       {children}
     </ThemeContext.Provider>
-
   );
 };
 
 export default ThemeState;
 
 export const useTheme = () => {
-  const { theme } = useContext(ThemeContext);
-  return { theme };
+  const { theme, darkMode, updateTheme } = useContext(ThemeContext);
+  return { theme, darkMode, updateTheme };
 };

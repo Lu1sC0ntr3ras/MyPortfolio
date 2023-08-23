@@ -1,11 +1,14 @@
-import { Email, GitHub, GitLab, Linkedin, Outlook, Phone, Whatsapp } from '@/shared/components/global/svg/svg.component';
+import { useTheme } from '@/core/context/theme/ThemeState';
+import { Email, GitHub, GitLab, Linkedin, Whatsapp } from '@/shared/components/global/svg/svg.component';
 import { NextPage } from 'next';
 
 const ContacInfo: NextPage = () => {
+  const { theme: { page, text, title, color } } = useTheme();
+
   return (
-    <div className='page_light'>
-      <p className='title fs-20'>{'Contact info'}</p>
-      <p className='text'>
+    <div className={page}>
+      <p className={`${title} fs-20`}>{'Contact info'}</p>
+      <p className={`${text}`}>
         {`
           If you need to get in touch with me, here is a list with the 
           information you need to find me. Feel free to use any of these 
@@ -15,30 +18,30 @@ const ContacInfo: NextPage = () => {
       <hr
         style={{
           border: 'none',
-          borderBottom: '1px solid #333333',
-          boxShadow: '0rem 0.1rem 0.2rem #333333'
+          borderBottom: `1px solid ${color}`,
+          boxShadow: `0rem 0.1rem 0.2rem ${color}`
         }}
       />
-      <p className='text'>{'Luis Eduardo Contreras Mendez'}</p>
+      <p className={`${title} fs-16`}>{'Luis Eduardo Contreras Mendez'}</p>
       <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }} >
-        <Email />
-        <p className='text fs-14'>{'LuisE.Contreras@outlook.com'}</p>
+        <Email fill={color} />
+        <p className={`${text} fs-14`}>{'LuisE.Contreras@outlook.com - elcontreras@uninorte.edu.co'}</p>
       </div>
       <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }} >
-        <Whatsapp />
-        <p className='text fs-14'>{'(+57) 3004459355'}</p>
+        <Whatsapp fill={color} />
+        <p className={`${text} fs-14`}>{'(+57) 3004459355'}</p>
       </div>
       <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }} >
-        <Linkedin />
-        <p className='text fs-14'>{'/in/luis-contreras-m/'}</p>
+        <Linkedin fill={color} />
+        <p className={`${text} fs-14`}>{'/in/luis-contreras-m/'}</p>
       </div>
       <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }} >
-        <GitLab />
-        <p className='text fs-14'>{'gitlab.com/Lu1sC0ntr3ras'}</p>
+        <GitLab fill={color} />
+        <p className={`${text} fs-14`}>{'gitlab.com/Lu1sC0ntr3ras'}</p>
       </div>
       <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }} >
-        <GitHub />
-        <p className='text fs-14'>{'github.com/Lu1sC0ntr3ras'}</p>
+        <GitHub fill={color} />
+        <p className={`${text} fs-14`}>{'github.com/Lu1sC0ntr3ras'}</p>
       </div>
     </div>
   );

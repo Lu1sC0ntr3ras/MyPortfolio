@@ -1,10 +1,13 @@
+import { useTheme } from '@/core/context/theme/ThemeState';
 import { NextPage } from 'next';
 
 const Curriculum: NextPage = () => {
+  const { theme: { page, text, title, color } } = useTheme();
+
   return (
-    <div className='page_light'>
-      <p className='title fs-20'>{'Download my curriculum'}</p>
-      <p className='text fs-14'>
+    <div className={page}>
+      <p className={`${title} fs-20`}>{'Download my curriculum'}</p>
+      <p className={`${text} fs-14`}>
         {`
         If you need my resume, on this page you have the 
         option to download my resume in both Spanish and English.
@@ -29,13 +32,13 @@ const Curriculum: NextPage = () => {
         >
           <div
             style={{
-              border: '2px solid #333',
+              border: `2px solid ${color}`,
               padding: '5px 10px',
               borderRadius: '5px',
               cursor: 'pointer'
             }}
           >
-            <p className='title fs-14'>{'Download in english'}</p>
+            <p className={`${title} fs-14`}>{'Download in english'}</p>
           </div>
         </a>
         <a
@@ -50,13 +53,13 @@ const Curriculum: NextPage = () => {
         >
           <div
             style={{
-              border: '2px solid #333',
+              border: `2px solid ${color}`,
               padding: '5px 10px',
               borderRadius: '5px',
               cursor: 'pointer'
             }}
           >
-            <p className='title fs-14'>{'Download in spanish'}</p>
+            <p className={`${title} fs-14`}>{'Download in spanish'}</p>
           </div>
         </a>
       </div>
