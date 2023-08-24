@@ -3,7 +3,7 @@ import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import { NextPage } from 'next';
 import '../styles/global.scss';
-import Layout from '@/shared/components/base/layout/Layout.component';
+import Layout from '@/shared/components/base/layout/layout.component';
 import ThemeState from '@/core/context/theme/ThemeState';
 
 export type NextPageWithLayout<P = object, IP = P> = NextPage<P, IP> & {

@@ -1,0 +1,6 @@
+@import "../utilities/index.scss";
+
+.portfolio_projects {
+  @include flex-content(column, auto, auto, 20px);
+  padding-bottom: 20px;
+}

@@ -2,6 +2,14 @@
   display: flex;
 }
 
+.jc{
+  justify-content: center;
+}
+
+.fc{
+  flex-direction: column;
+}
+
 @for $i from 1 through $font-sizes {
   .g-#{$i} {
     gap: #{$i}px;

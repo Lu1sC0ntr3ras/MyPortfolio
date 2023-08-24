@@ -1,4 +1,4 @@
-import { ICard } from '../interface/global/ImageCard.interface';
+import { ICard } from '../interface/global/image-card.interface';
 
 export interface ICardPage {
   education: ICard;

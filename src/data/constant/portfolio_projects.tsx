@@ -2,7 +2,7 @@ interface IProject {
   name: string;
   image: string;
   text: JSX.Element; // Tipo de un fragmento o elemento JSX
-  year: number[];
+  year: number;
   technologies: string[];
 }
 
@@ -22,17 +22,15 @@ export const projects: IProjects = {
       name: 'Tekneo',
       image: 'tekneo_image',
       text: (
-        <>
-          <p className="fs-12">
-            {`
+        <p className="fs-12">
+          {`
             Home automation project, to manage the control and access of people to a work 
             environment, with levels, floors, and doors, access can be controlled with QR 
             codes, and face reader.
             `}
-          </p>
-        </>
+        </p>
       ),
-      year: [2022],
+      year: 2022,
       technologies: ['HTML', 'CSS', 'TypeScript', 'React', 'Next Js', 'Sass', 'Node Js']
     },
     {
@@ -49,7 +47,7 @@ export const projects: IProjects = {
           </p>
         </>
       ),
-      year: [2022],
+      year: 2022,
       technologies: ['HTML', 'CSS', 'TypeScript', 'React', 'Next Js', 'Sass', 'Node Js']
     },
     {
@@ -67,7 +65,7 @@ export const projects: IProjects = {
           </p>
         </>
       ),
-      year: [2023],
+      year: 2023,
       technologies: ['Nest Js', 'TypeScript', 'SQL', 'Node Js']
     },
     {
@@ -84,7 +82,7 @@ export const projects: IProjects = {
           </p>
         </>
       ),
-      year: [2022],
+      year: 2022,
       technologies: ['TypeScript', 'React Native', 'Node Js']
     }
   ]

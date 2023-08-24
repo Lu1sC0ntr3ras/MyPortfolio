@@ -1,4 +1,4 @@
-import { ISvgConfig } from '@/data/interface/global/ImageCard.interface';
+import { ISvgConfig } from '@/data/interface/global/image-card.interface';
 
 export const ArrowBottom = ({
   fill = 'black',

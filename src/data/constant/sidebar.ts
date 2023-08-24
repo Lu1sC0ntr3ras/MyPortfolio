@@ -1,4 +1,4 @@
-import { ISidebar, ISidebarLeftOption } from '../interface/shared/components/base/sidebar/Sidebar.interface';
+import { ISidebar, ISidebarLeftOption } from '../interface/shared/components/base/sidebar/sidebar.interface';
 
 const leftOptions: ISidebarLeftOption[] = [
   {

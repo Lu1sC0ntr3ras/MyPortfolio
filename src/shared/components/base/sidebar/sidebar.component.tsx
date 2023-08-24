@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { FC, MouseEvent, useEffect, useRef, useState } from 'react';
-import { ISidebar, ISidebarLeftOption } from '@/data/interface/shared/components/base/sidebar/Sidebar.interface';
+import { ISidebar, ISidebarLeftOption } from '@/data/interface/shared/components/base/sidebar/sidebar.interface';
 import { useRouter } from 'next/router';
 import { useTheme } from '@/core/context/theme/ThemeState';
 

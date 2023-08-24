@@ -1,4 +1,4 @@
-import { ICard } from '@/data/interface/global/ImageCard.interface';
+import { ICard } from '@/data/interface/global/image-card.interface';
 import { FC } from 'react';
 
 const ImageCard: FC<ICard> = ({ text, description, image }) => {

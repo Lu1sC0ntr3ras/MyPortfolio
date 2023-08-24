@@ -2,8 +2,22 @@
 
 .project_card {
   @include flex-content(column, auto, auto, 10px);
+  overflow: hidden;
   width: 100%;
-  min-height: 50px;
+  max-height: 28px;
+  transition: max-height 1s ease-out;
+  border-bottom-left-radius: 5px;
+  padding: 0px 0px 10px 10px;
+
+  .project_title{
+    @include flex-content(ow, space-between);
+    cursor: pointer;
+  }
+
+  &.expanded{
+    max-height: 500px;
+    transition: max-height 1s ease-in;
+  }
 }
 
 .box_technology {
