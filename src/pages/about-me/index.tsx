@@ -16,9 +16,7 @@ const AboutMe: NextPage = () => {
         }}
       >
         <div className='profile_image' style={{ borderColor: color }}/>
-        <div
-          style={{ textAlign: 'justify' }}
-        >
+        <div style={{ textAlign: 'justify' }} >
           <p className={text}>
             {`
             I always seek to improve myself, I consider that programming is my field

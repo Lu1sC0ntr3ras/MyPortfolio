@@ -76,7 +76,7 @@ export const projects: IProjects = {
           <p className="fs-12">
             {`
             Mobile application for managing home automation equipment, access control through 
-            doors with FRID cards, temperature control, air conditioning management and 
+            doors with RFID cards, temperature control, air conditioning management and 
             temperature and presence sensors with different types of frequencies.
             `}
           </p>
