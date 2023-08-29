@@ -1,3 +1,5 @@
+@import "../utilities/index.scss";
+
 .profile_image{
   @include box(100px, 100px, url('../../../public/assets/profile_image.png'));
   background-size: cover;

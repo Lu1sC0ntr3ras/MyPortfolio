@@ -1,0 +1,41 @@
+.certification_container {
+  width: 150px;
+  height: 150px;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.image_card{
+  position: absolute;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  transform-origin: bottom;
+  transition: transform 0.5s linear;
+  &.vanish{
+    transform: scaleY(0);
+  }
+}
+
+.text_card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  z-index: 2;
+}

@@ -1,0 +1,6 @@
+@import "../utilities/index.scss";
+
+.list_certifications{
+  @include flex-content(row, flex-start ,center, 50px);
+  flex-wrap: wrap;
+}

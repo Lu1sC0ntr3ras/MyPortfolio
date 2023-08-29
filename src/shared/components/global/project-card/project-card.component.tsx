@@ -34,7 +34,7 @@ const ProjectCard = ({ name, technologies, text, year }: IProjectCard): JSX.Elem
         onClick={() => { setOpen(!open); }}
       >
         <p className={`${title} fs-16`}>{name}</p>
-        { open ? <ArrowTop/> : <ArrowBottom/> }
+        { open ? <ArrowTop fill={color}/> : <ArrowBottom fill={color}/> }
       </div>
       <p className={`${title} italic fs-12`}>{year}</p>
       <div className={`${text}`} style={{ color }}>{text}</div>
