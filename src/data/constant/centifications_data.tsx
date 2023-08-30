@@ -19,5 +19,18 @@ export const certification: ICertifications = {
     }
   ],
   english: [],
-  udemy: []
+  udemy: [
+    {
+      name: 'Node: De cero a experto',
+      text: <div></div>,
+      image: <div className="udemy_logo" style={{ width: '100%', height: '100%' }} />,
+      description: ''
+    },
+    {
+      name: 'Nest: Desarrollo backend escalable con Node',
+      text: <div></div>,
+      image: <div className="udemy_logo" style={{ width: '100%', height: '100%' }} />,
+      description: ''
+    }
+  ]
 };

@@ -28,6 +28,16 @@ const Certifications: NextPage = () => {
             }}
           />
         )}
+        {certification.udemy.map((obj, idx) =>
+          <CertificationCard
+            key={idx}
+            certification={obj}
+            action={(event) => {
+              event.stopPropagation();
+              console.log('hello');
+            }}
+          />
+        )}
       </div>
     </div>
   );

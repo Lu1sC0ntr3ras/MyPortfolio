@@ -11,18 +11,22 @@ const CertificationCard = ({ certification, action }: ICertificationCard): JSX.E
       style={{ boxShadow: `0rem 0rem 0.1rem ${color}` }}
       onClick={() => setOpen(!open)}
     >
-      <div className={`image_card ${open ? 'vanish' : ''}`}
+      <div className={`image_card ${!open ? 'vanish' : ''}`}
         style={{ background }}
       >
-        {certification.image}
+        <div className='certification_image'>
+          {certification.image}
+        </div>
+        <div className='show_button'>
+          <Button
+            text='Show +'
+            height={20}
+            action={action}
+          />
+        </div>
       </div>
       <div className={`text_card`}>
         <p className={`${title} fs-14`}>{certification.name}</p>
-        <Button
-          text='Show +'
-          height={25}
-          action={action}
-        />
       </div>
     </div>
   );
