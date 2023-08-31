@@ -1,7 +1,7 @@
 import { useTheme } from '@/core/context/theme/ThemeState';
 import { IButton } from '@/data/interface/global/button.interface';
 
-const Button = ({ text, width, height, action, buttonColor, buttonBackground }: IButton): JSX.Element => {
+const Button = ({ text, width, height, action, buttonColor, buttonBackground, children }: IButton): JSX.Element => {
   const { theme: { color, background, title } } = useTheme();
   return (
     <button
@@ -14,7 +14,7 @@ const Button = ({ text, width, height, action, buttonColor, buttonBackground }: 
         color: buttonColor ?? background
       }}
     >
-      {text}
+      { children || text }
     </button>
   );
 };

@@ -1,4 +1,7 @@
+@import "../utilities/index.scss";
+
 .button {
+  @include flex-content(column, center, center);
   border: none;
   background-color: transparent;
   color: inherit;

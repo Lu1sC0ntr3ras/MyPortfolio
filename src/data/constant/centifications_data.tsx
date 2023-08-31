@@ -1,7 +1,7 @@
 import { ICertifications } from '../interface/global/certification.interface';
 
 export const certification: ICertifications = {
-  uninorte: [
+  University: [
     {
       name: 'Computer Systems Engineering',
       text:
@@ -18,8 +18,7 @@ export const certification: ICertifications = {
       description: 'International Accreditation of the Engineering Accreditation Commission of ABET.'
     }
   ],
-  english: [],
-  udemy: [
+  Particular: [
     {
       name: 'Node: De cero a experto',
       text: <div></div>,
@@ -32,5 +31,6 @@ export const certification: ICertifications = {
       image: <div className="udemy_logo" style={{ width: '100%', height: '100%' }} />,
       description: ''
     }
-  ]
+  ],
+  Languajes: []
 };

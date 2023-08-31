@@ -1,6 +1,6 @@
 import { useTheme } from '@/core/context/theme/ThemeState';
 import CircularProgressBar from '@/shared/components/global/circular-progress-bar/circular-progress-bar.component';
-import { Angular, CSS, HTML5, JavaScript, NestJs, NextJS, NodeJs, React as Rct, SQL, Sass, TypeScript } from '@/shared/components/global/icons/icons.component';
+import { Angular, CSS, Docker, Git, HTML5, JavaScript, NestJs, NextJS, NodeJs, React as Rct, SQL, Sass, TypeScript } from '@/shared/components/global/icons/icons.component';
 import { NextPage } from 'next';
 
 const Skills: NextPage = () => {
@@ -158,7 +158,24 @@ const Skills: NextPage = () => {
         }}
       />
       <p className={`${title} fs-18`}>{'Complementary'}</p>
-      <div style={{ display: 'flex', flexWrap: 'wrap' }}></div>
+      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+        <div style={{ width: '150px' }} >
+          <CircularProgressBar
+            title='Git'
+            color='#EE513B'
+            icon={<Git width='45px' height='45px'/>}
+            percentage={85}
+          />
+        </div>
+        <div style={{ width: '150px' }} >
+          <CircularProgressBar
+            title='Docker'
+            color='#2396ED'
+            icon={<Docker width='45px' height='45px'/>}
+            percentage={50}
+          />
+        </div>
+      </div>
     </div>
   );
 };

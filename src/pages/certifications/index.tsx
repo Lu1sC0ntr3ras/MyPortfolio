@@ -17,28 +17,27 @@ const Certifications: NextPage = () => {
           me improve as a programmer in recent years.
         `}
       </p>
-      <div className='list_certifications'>
-        {certification.uninorte.map((obj, idx) =>
-          <CertificationCard
-            key={idx}
-            certification={obj}
-            action={(event) => {
-              event.stopPropagation();
-              console.log('hello');
-            }}
-          />
-        )}
-        {certification.udemy.map((obj, idx) =>
-          <CertificationCard
-            key={idx}
-            certification={obj}
-            action={(event) => {
-              event.stopPropagation();
-              console.log('hello');
-            }}
-          />
-        )}
-      </div>
+      {
+        Object.entries(certification).map(([key, obj]) => {
+          return (
+            <>
+              <p className={`${title}`}>{key}</p>
+              <div className='list_certifications'>
+                {obj.map((cer, idx) =>
+                  <CertificationCard
+                    key={idx}
+                    certification={cer}
+                    action={(event) => {
+                      event.stopPropagation();
+                      console.log('hello');
+                    }}
+                  />
+                )}
+              </div>
+            </>
+          );
+        })
+      }
     </div>
   );
 };
