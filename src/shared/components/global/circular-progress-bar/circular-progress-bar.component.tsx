@@ -25,6 +25,7 @@ const CircularProgressBar: React.FC<CircularProgressBarProps> = ({
   return (
     <div className="circular-progress">
       <p className='title_light fs-16' style={{ color }}>{title ?? 'example'}</p>
+      {/* <p className='title_light fs-16' style={{ color }}>{`${percentage > 100 ? 100 : percentage}%`}</p> */}
       <div className="container-circle">
         <div className='icon'>
           {icon}
@@ -32,14 +33,14 @@ const CircularProgressBar: React.FC<CircularProgressBarProps> = ({
         <svg className="circle">
           <circle
             className="circle-background"
-            style={{ stroke, opacity: 0.2 }}
+            style={{ stroke, opacity: 0.1 }}
             cx={radius + 5}
             cy={radius + 5}
             r={radius}
           />
           <circle
             className="circle-progress"
-            style={{ stroke, opacity: 0.5 }}
+            style={{ stroke, opacity: 0.7 }}
             cx={radius + 5}
             cy={radius + 5}
             r={radius}
@@ -48,11 +49,11 @@ const CircularProgressBar: React.FC<CircularProgressBarProps> = ({
           />
         </svg>
       </div>
-      <div className="percentage">
+      {/* <div className="percentage">
         <p className='title_light fs-16 ' style={{ color }}>
           {`${percentage > 100 ? 100 : percentage}%`}
         </p>
-      </div>
+      </div> */}
     </div>
   );
 };

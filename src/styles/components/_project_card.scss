@@ -10,7 +10,7 @@
   padding: 0px 0px 10px 10px;
 
   .project_title{
-    @include flex-content(ow, space-between);
+    @include flex-content(row, space-between);
     cursor: pointer;
   }
 
