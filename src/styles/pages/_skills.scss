@@ -1,6 +1,5 @@
 .container_circle {
   @include flex-content(column, null, null, 10px);
-  overflow: hidden;
   cursor: pointer;
   width: 100%;
   max-height: 40px;
@@ -8,5 +7,11 @@
   &.expanded{
     max-height: 500px;
     transition: max-height 1s ease;
+  }
+
+  .circles {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
   }
 }

@@ -25,12 +25,12 @@ const Skills: NextPage = () => {
         `}
       </p>
 
-      <div className={`container_circle g-10 ${open[1] ? '' : 'expanded'}`}
+      <div className={`container_circle g-10 ${open[1] ? 'expanded' : ''}`}
         onClick={() => { setOpen({ ...open, 1: !open[1] }); }}
       >
         <LineBar/>
         <p className={`${title} fs-16`}>{'Programming languages'}</p>
-        <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+        <div className='circles'>
           <CircularProgressBar
             title='HTML5'
             color='#FF4300'
@@ -64,11 +64,11 @@ const Skills: NextPage = () => {
         </div>
       </div>
 
-      <div className={`container_circle g-10 ${open[2] ? '' : 'expanded'}`}
+      <div className={`container_circle g-10 ${open[2] ? 'expanded' : ''}`}
         onClick={() => { setOpen({ ...open, 2: !open[2] }); }}>
         <LineBar/>
         <p className={`${title} fs-16`}>{'Front-End'}</p>
-        <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+        <div className='circles'>
           <CircularProgressBar
             title='React'
             color='#53C1DE'
@@ -101,12 +101,11 @@ const Skills: NextPage = () => {
           />
         </div>
       </div>
-
-      <div className={`container_circle g-10 ${open[3] ? '' : 'expanded'}`}
+      <div className={`container_circle g-10 ${open[3] ? 'expanded' : ''}`}
         onClick={() => { setOpen({ ...open, 3: !open[3] }); }}>
         <LineBar/>
         <p className={`${title} fs-16`}>{'Back-End'}</p>
-        <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+        <div className='circles'>
           <CircularProgressBar
             title='NodeJs'
             color='#8CC84B'
@@ -128,11 +127,11 @@ const Skills: NextPage = () => {
         </div>
       </div>
 
-      <div className={`container_circle g-10 ${open[4] ? '' : 'expanded'}`}
+      <div className={`container_circle g-10 ${open[4] ? 'expanded' : ''}`}
         onClick={() => { setOpen({ ...open, 4: !open[4] }); }}>
         <LineBar/>
         <p className={`${title} fs-16`}>{'Complementary'}</p>
-        <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+        <div className='circles'>
           <CircularProgressBar
             title='Git'
             color='#EE513B'

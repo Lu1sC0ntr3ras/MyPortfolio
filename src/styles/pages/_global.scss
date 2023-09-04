@@ -20,8 +20,9 @@
 
 .scroll_y {
   justify-content: flex-start;
-  height: 100%;
-  // padding-top: 20px;
   overflow-y: scroll;
   position: relative;
+  &::-webkit-scrollbar{
+    opacity: 0;
+  }
 }
