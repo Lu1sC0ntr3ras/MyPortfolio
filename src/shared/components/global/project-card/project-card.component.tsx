@@ -1,5 +1,5 @@
 import { useTheme } from '@/core/context/theme/ThemeState';
-import { IProjectCard } from '@/data/interface/global/project-card.interface';
+import { IProjectCard } from '@/data/interface/global/project-card/project-card.interface';
 import { useState } from 'react';
 import { ArrowBottom, ArrowTop } from '../svg/svg.component';
 
@@ -9,7 +9,7 @@ const ProjectCard = ({ name, technologies, text, year }: IProjectCard): JSX.Elem
 
   const Buttons = ({ data }: { data: string[]; }): JSX.Element => {
     return (
-      <div className='flex g-10'>
+      <div className='flex fw g-10'>
         {
           data.map((len, index) =>
             <div className='box_technology' key={len + index}

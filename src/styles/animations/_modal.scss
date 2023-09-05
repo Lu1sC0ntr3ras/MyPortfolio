@@ -1,0 +1,33 @@
+@keyframes open_modal {
+  0%{
+    top: 100%
+  }
+  100%{
+    top: 0%
+  }
+  // 0%{
+  //   -webkit-transform: scale(0.5);
+  //   transform: scale(0.5);
+  // }
+  // 100%{
+  //   -webkit-transform: scale(1);
+  //   transform: scale(1);
+  // }
+}
+
+@keyframes close_modal {
+  0%{
+    top: 0%
+  }
+  100%{
+    top: 100%
+  }
+  // 0%{
+  //   -webkit-transform: scale(1);
+  //   transform: scale(1);
+  // }
+  // 100%{
+  //   -webkit-transform: scale(0);
+  //   transform: scale(0);
+  // }
+}

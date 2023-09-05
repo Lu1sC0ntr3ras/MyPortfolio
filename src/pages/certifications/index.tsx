@@ -1,10 +1,13 @@
 import { useTheme } from '@/core/context/theme/ThemeState';
+import useModal from '@/core/hook/modal/modal.hook';
 import { certification } from '@/data/constant/centifications_data';
 import CertificationCard from '@/shared/components/global/certification-card/certification-card.component';
+import Modal from '@/shared/components/global/modal/modal.component';
 import { NextPage } from 'next';
 
 const Certifications: NextPage = () => {
   const { theme: { page, text, title } } = useTheme();
+  const { setModal, ...rest } = useModal();
 
   return (
     <div className={`${page} scroll_y`}>
@@ -29,7 +32,7 @@ const Certifications: NextPage = () => {
                     certification={cer}
                     action={(event) => {
                       event.stopPropagation();
-                      console.log('hello');
+                      setModal({ title: cer.name, content: cer.text });
                     }}
                   />
                 )}
@@ -38,6 +41,7 @@ const Certifications: NextPage = () => {
           );
         })
       }
+      <Modal {...rest} />
     </div>
   );
 };

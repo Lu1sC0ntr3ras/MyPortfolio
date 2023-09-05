@@ -1,0 +1,22 @@
+@import "../utilities/index.scss";
+
+.modal_container {
+  @include box(auto, auto, transparent, 20px);
+  max-width: 400px;
+  @include flex-content(column, center , center, 20px);
+  position: relative;
+  border-radius: 5px;
+
+  @include animation($open_modal, 0.5s);
+  &__hide {
+    @extend .modal_container;
+    @include animation($close_modal, 0.5s);
+  }
+
+  .content {
+    div{
+      text-align: justify;
+    }
+  }
+}
+

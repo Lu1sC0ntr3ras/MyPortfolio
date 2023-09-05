@@ -1,0 +1,24 @@
+@import "../utilities/index.scss";
+
+.contact_info{
+
+}
+
+.container_contact {
+  @include flex-content(row, flex-start, center, 5px);
+  div{
+    @include flex-content(row, flex-start, center);
+    width: 30px;
+  }
+  p{
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .container_contact{
+    @include flex-content(column, center, center, 0px);
+  }
+  
+}

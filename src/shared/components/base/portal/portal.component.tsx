@@ -1,4 +1,4 @@
-import { IPortal } from '@/data/interface/global/portal.interface';
+import { IPortal } from '@/data/interface/global/portal/portal.interface';
 import { NextPage } from 'next';
 import { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';

@@ -1,8 +1,8 @@
-import { IThemeContext, IThemeState } from '@/data/interface/context/Theme';
 import { NextPage } from 'next';
 import { useContext, useReducer } from 'react';
 import themeReducer from './themeReducer';
 import { ThemeContext, initialState } from './ThemeContext';
+import { IThemeContext, IThemeState } from '@/data/interface/core/context/theme.interface';
 
 const ThemeState: NextPage<IThemeState> = ({ children }) => {
   const [state, dispatch] = useReducer(themeReducer, initialState);

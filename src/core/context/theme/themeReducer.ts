@@ -1,4 +1,4 @@
-import { IThemeAction, IThemeContext, IThemeStyles } from '@/data/interface/context/Theme';
+import { IThemeAction, IThemeContext, IThemeStyles } from '@/data/interface/core/context/theme.interface';
 
 const themeReducer = (state: IThemeContext, action: IThemeAction): IThemeContext => {
   const { type, payload } = action;

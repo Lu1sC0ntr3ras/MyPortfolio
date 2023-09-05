@@ -1,4 +1,4 @@
-import { ICertificationCard } from '@/data/interface/global/certification-card.interface';
+import { ICertificationCard } from '@/data/interface/global/certification-card/certification-card.interface';
 import { useState } from 'react';
 import Button from '../button/button.component';
 import { useTheme } from '@/core/context/theme/ThemeState';

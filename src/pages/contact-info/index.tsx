@@ -6,7 +6,7 @@ const ContacInfo: NextPage = () => {
   const { theme: { page, text, title, color } } = useTheme();
 
   return (
-    <div className={page}>
+    <div className={`${page}`}>
       <p className={`${title} fs-20`}>{'Contact info'}</p>
       <p className={`${text}`}>
         {`
@@ -23,24 +23,34 @@ const ContacInfo: NextPage = () => {
         }}
       />
       <p className={`${title} fs-16`}>{'Luis Eduardo Contreras Mendez'}</p>
-      <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }} >
-        <Email fill={color} />
+      <div className='container_contact'>
+        <div>
+          <Email fill={color} />
+        </div>
         <p className={`${text} fs-14`}>{'LuisE.Contreras@outlook.com - elcontreras@uninorte.edu.co'}</p>
       </div>
-      <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }} >
-        <Whatsapp fill={color} />
+      <div className='container_contact'>
+        <div>
+          <Whatsapp fill={color} />
+        </div>
         <p className={`${text} fs-14`}>{'(+57) 3004459355'}</p>
       </div>
-      <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }} >
-        <Linkedin fill={color} />
+      <div className='container_contact'>
+        <div>
+          <Linkedin fill={color} />
+        </div>
         <p className={`${text} fs-14`}>{'/in/luis-contreras-m/'}</p>
       </div>
-      <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }} >
-        <GitLab fill={color} />
+      <div className='container_contact'>
+        <div>
+          <GitLab fill={color} />
+        </div>
         <p className={`${text} fs-14`}>{'gitlab.com/Lu1sC0ntr3ras'}</p>
       </div>
-      <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }} >
-        <GitHub fill={color} />
+      <div className='container_contact'>
+        <div>
+          <GitHub fill={color} />
+        </div>
         <p className={`${text} fs-14`}>{'github.com/Lu1sC0ntr3ras'}</p>
       </div>
     </div>
