@@ -1,7 +1,7 @@
 import { MouseEventHandler } from 'react';
-import { ICertification } from '../ certification/certification.interface';
+import { IInformation } from '../certification/certification.interface';
 
 export interface ICertificationCard {
-  certification: ICertification;
+  certification: IInformation;
   action: MouseEventHandler<HTMLButtonElement>;
 }

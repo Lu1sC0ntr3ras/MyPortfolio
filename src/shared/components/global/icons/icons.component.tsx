@@ -1,4 +1,4 @@
-import { ISvgConfig } from '@/data/interface/global/image-card.interface';
+import { ISvgConfig } from '@/data/interface/global/image-card/image-card.interface';
 
 export const HTML5 = ({
   fill = 'black',
@@ -65,7 +65,6 @@ export const SQL = ({
   );
 };
 export const React = ({
-  fill = 'black',
   height = '25px',
   width = '25px'
 }: ISvgConfig) => {

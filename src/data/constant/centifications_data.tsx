@@ -1,4 +1,4 @@
-import { ICertificationData, ICertifications } from '../interface/global/ certification/certification.interface';
+import { ICertificationData } from '../interface/global/certification/certification.interface';
 
 export const certification: ICertificationData = {
   University: {
