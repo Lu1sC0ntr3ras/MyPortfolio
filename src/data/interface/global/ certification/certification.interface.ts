@@ -1,4 +1,4 @@
-export interface ICertification {
+export interface IInformation {
   name: string;
   text: JSX.Element;
   image: JSX.Element;
@@ -6,5 +6,10 @@ export interface ICertification {
 }
 
 export interface ICertifications {
-  [x: string]: ICertification[];
+  information: string;
+  certification: IInformation[];
+}
+
+export interface ICertificationData {
+  [x: string]: ICertifications;
 }

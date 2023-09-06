@@ -14,7 +14,7 @@ const ProjectCard = ({ name, technologies, text, year }: IProjectCard): JSX.Elem
           data.map((len, index) =>
             <div className='box_technology' key={len + index}
               style={{ background: color }}>
-              <p className={`${txt} fs-12`}
+              <p className={`${txt} fs-16`}
                 style={{ color: background }}>{len}</p>
             </div>
           )
@@ -36,8 +36,8 @@ const ProjectCard = ({ name, technologies, text, year }: IProjectCard): JSX.Elem
         <p className={`${title} fs-16`}>{name}</p>
         { open ? <ArrowTop fill={color}/> : <ArrowBottom fill={color}/> }
       </div>
-      <p className={`${title} italic fs-12`}>{year}</p>
-      <div className={`${text}`} style={{ color }}>{text}</div>
+      <p className={`${txt} italic fs-16`}>{year}</p>
+      <div className={`${txt} justify`} style={{ color }}>{text}</div>
       <Buttons data={technologies} />
     </div>
   );

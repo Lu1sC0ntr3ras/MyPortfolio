@@ -21,14 +21,15 @@ const Certifications: NextPage = () => {
         `}
       </p>
       {
-        Object.entries(certification).map(([key, obj]) => {
+        Object.entries(certification).map(([key, obj], index) => {
           return (
-            <>
+            <div className='container_list' key={index + key}>
               <p className={`${title}`}>{key}</p>
+              <p className={`${text}`}>{obj.information}</p>
               <div className='list_certifications'>
-                {obj.map((cer, idx) =>
+                {obj.certification.map((cer, idx) =>
                   <CertificationCard
-                    key={idx}
+                    key={idx + cer.name}
                     certification={cer}
                     action={(event) => {
                       event.stopPropagation();
@@ -37,7 +38,7 @@ const Certifications: NextPage = () => {
                   />
                 )}
               </div>
-            </>
+            </div>
           );
         })
       }

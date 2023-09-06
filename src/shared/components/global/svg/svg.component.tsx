@@ -80,8 +80,8 @@ export const Email = ({
 }: ISvgConfig) => {
   return (
     <svg stroke={fill} viewBox="0 0 496 512" height={height} width={width} xmlns="http://www.w3.org/2000/svg">
-      <rect x="48" y="96" width="416" height="320" rx="40" ry="40" fill="none" stroke-linecap="round" stroke-linejoin="round" strokeWidth="32"/>
-      <path fill="none" stroke-linecap="round" stroke-linejoin="round" strokeWidth="32" d="M112 160l144 112 144-112"/>
+      <rect x="48" y="96" width="416" height="320" rx="40" ry="40" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32"/>
+      <path fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32" d="M112 160l144 112 144-112"/>
     </svg>
   );
 };
@@ -93,7 +93,7 @@ export const Phone = ({
 }: ISvgConfig) => {
   return (
     <svg stroke="currentColor" fill={fill} strokeWidth="0" viewBox="0 0 496 512" height={height} width={width} xmlns="http://www.w3.org/2000/svg">
-      <path d="M451 374c-15.88-16-54.34-39.35-73-48.76-24.3-12.24-26.3-13.24-45.4.95-12.74 9.47-21.21 17.93-36.12 14.75s-47.31-21.11-75.68-49.39-47.34-61.62-50.53-76.48 5.41-23.23 14.79-36c13.22-18 12.22-21 .92-45.3-8.81-18.9-32.84-57-48.9-72.8C119.9 44 119.9 47 108.83 51.6A160.15 160.15 0 0083 65.37C67 76 58.12 84.83 51.91 98.1s-9 44.38 23.07 102.64 54.57 88.05 101.14 134.49S258.5 406.64 310.85 436c64.76 36.27 89.6 29.2 102.91 23s22.18-15 32.83-31a159.09 159.09 0 0013.8-25.8C465 391.17 468 391.17 451 374z" fill="none" stroke="currentColor" stroke-miterlimit="10" strokeWidth="32"/>
+      <path d="M451 374c-15.88-16-54.34-39.35-73-48.76-24.3-12.24-26.3-13.24-45.4.95-12.74 9.47-21.21 17.93-36.12 14.75s-47.31-21.11-75.68-49.39-47.34-61.62-50.53-76.48 5.41-23.23 14.79-36c13.22-18 12.22-21 .92-45.3-8.81-18.9-32.84-57-48.9-72.8C119.9 44 119.9 47 108.83 51.6A160.15 160.15 0 0083 65.37C67 76 58.12 84.83 51.91 98.1s-9 44.38 23.07 102.64 54.57 88.05 101.14 134.49S258.5 406.64 310.85 436c64.76 36.27 89.6 29.2 102.91 23s22.18-15 32.83-31a159.09 159.09 0 0013.8-25.8C465 391.17 468 391.17 451 374z" fill="none" stroke="currentColor" strokeMiterlimit="10" strokeWidth="32"/>
     </svg>
   );
 };
@@ -117,8 +117,8 @@ export const LightIcon = ({
 }: ISvgConfig) => {
   return (
     <svg height={height} width={width} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill='red' >
-      <path stroke={fill} stroke-linecap="round" stroke-miterlimit="10" strokeWidth="32" d="M256 48v48M256 416v48M403.08 108.92l-33.94 33.94M142.86 369.14l-33.94 33.94M464 256h-48M96 256H48M403.08 403.08l-33.94-33.94M142.86 142.86l-33.94-33.94" />
-      <circle stroke={fill} cx="256" cy="256" r="80" fill="none" stroke-linecap="round" stroke-miterlimit="10" strokeWidth="32" />
+      <path stroke={fill} strokeLinecap="round" strokeMiterlimit="10" strokeWidth="32" d="M256 48v48M256 416v48M403.08 108.92l-33.94 33.94M142.86 369.14l-33.94 33.94M464 256h-48M96 256H48M403.08 403.08l-33.94-33.94M142.86 142.86l-33.94-33.94" />
+      <circle stroke={fill} cx="256" cy="256" r="80" fill="none" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="32" />
     </svg>
 
   );
@@ -131,7 +131,7 @@ export const DarkIcon = ({
 }: ISvgConfig) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height={height} width={width}>
-      <path stroke={fill} d="M160 136c0-30.62 4.51-61.61 16-88C99.57 81.27 48 159.32 48 248c0 119.29 96.71 216 216 216 88.68 0 166.73-51.57 200-128-26.39 11.49-57.38 16-88 16-119.29 0-216-96.71-216-216z" fill="none" stroke-linecap="round" stroke-linejoin="round" strokeWidth="32"/>
+      <path stroke={fill} d="M160 136c0-30.62 4.51-61.61 16-88C99.57 81.27 48 159.32 48 248c0 119.29 96.71 216 216 216 88.68 0 166.73-51.57 200-128-26.39 11.49-57.38 16-88 16-119.29 0-216-96.71-216-216z" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32"/>
     </svg>
 
   );

@@ -17,7 +17,7 @@ const Portfolio: NextPage = () => {
   return (
     <div className={`${theme.page} scroll_y`}>
       <p className={`${theme.title}`}>{'Portfolio'}</p>
-      <p className={`${theme.text} fs-14`}>
+      <p className={`${theme.text}`}>
         {`
           Everything I have done since I started working, in different projects, 
           evolving from putting and decorating every corner of a website, to managing 

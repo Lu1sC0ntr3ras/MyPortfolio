@@ -53,3 +53,15 @@
     font-size: #{$i}px;
   }
 }
+
+@media (max-width: 600px) {
+  .title{
+    text-align: center;
+  }
+  .text{
+    text-align: justify;
+  }
+  .italic{
+    text-align: justify;
+  }
+}

@@ -3,15 +3,35 @@
   cursor: pointer;
   width: 100%;
   max-height: 40px;
+
   transition: max-height 1s ease;
-  &.expanded{
-    max-height: 500px;
+  &.expanded {
+    max-height: 1000px;
     transition: max-height 1s ease;
   }
 
+  .content_title{
+    @include flex-content(row, space-between, center)
+  }
+
+  .information {
+    overflow: hidden;
+  }
   .circles {
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
+  }
+}
+
+@media (max-width: 600px) {
+  .container_circle{
+    max-height: 50px;
+    .content_title{
+      @include flex-content(column, center, center)
+    }
+    .circles {
+      justify-content: center;
+    }
   }
 }

@@ -7,7 +7,7 @@ const ContacInfo: NextPage = () => {
 
   return (
     <div className={`${page}`}>
-      <p className={`${title} fs-20`}>{'Contact info'}</p>
+      <p className={`${title}`}>{'Contact info'}</p>
       <p className={`${text}`}>
         {`
           If you need to get in touch with me, here is a list with the 

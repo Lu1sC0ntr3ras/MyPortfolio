@@ -31,9 +31,7 @@
 @media (max-width: 600px) {
   .page{
     text-align: center;
-    p{
-      text-align: justify;
-    }
     padding-left: 3%;
+    padding-bottom: calc(15% + 200px);
   }
 }

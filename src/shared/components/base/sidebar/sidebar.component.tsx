@@ -36,7 +36,10 @@ const Sidebar: FC<ISidebar> = ({ leftOptions, subtitle, title }) => {
     >
       <div className='open_bar'
         onClick={(event) => openLeftBar(event)}
-      />
+      >
+        <div style={{ background: color }}/>
+        <div style={{ background: color }}/>
+      </div>
       <div className='left_text' >
         <div className='container_left_titles'>
           <p className={`${tl} ${open ? 'appear' : 'vanish'}`}>{title}</p>

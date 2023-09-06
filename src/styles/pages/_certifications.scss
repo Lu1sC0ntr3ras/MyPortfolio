@@ -1,6 +1,18 @@
 @import "../utilities/index.scss";
 
-.list_certifications{
-  @include flex-content(row, flex-start ,center, 50px);
-  flex-wrap: wrap;
+.container_list {
+  @include flex-content(column, flex-start, flex-start, 20px);
+  .list_certifications {
+    @include flex-content(row, flex-start, center, 50px);
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 600px) {
+  .container_list {
+    align-items: center;
+    .list_certifications {
+      align-items: center;
+    }
+  }
 }

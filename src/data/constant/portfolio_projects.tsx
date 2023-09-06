@@ -22,7 +22,7 @@ export const projects: IProjects = {
       name: 'Tekneo',
       image: 'tekneo_image',
       text: (
-        <p className="fs-12">
+        <p className="fs-16">
           {`
             Home automation project, to manage the control and access of people to a work 
             environment, with levels, floors, and doors, access can be controlled with QR 
@@ -38,7 +38,7 @@ export const projects: IProjects = {
       image: 'node_maker_image',
       text: (
         <>
-          <p className="fs-12">
+          <p className="fs-16">
             {`
               An application to create connections between KNX and MQTT sources, we can 
               connect them with routing and data filters, save data in InfluxDb databases, 
@@ -55,7 +55,7 @@ export const projects: IProjects = {
       image: 'node_maker_image',
       text: (
         <>
-          <p className="fs-12">
+          <p className="fs-16">
             {`
             Application in charge of handling the data and making the connections and movement 
             of data between the KNX and MQTT sources, it is in charge of saving the data that 
@@ -73,7 +73,7 @@ export const projects: IProjects = {
       image: 'device_manager_image',
       text: (
         <>
-          <p className="fs-12">
+          <p className="fs-16">
             {`
             Mobile application for managing home automation equipment, access control through 
             doors with RFID cards, temperature control, air conditioning management and 

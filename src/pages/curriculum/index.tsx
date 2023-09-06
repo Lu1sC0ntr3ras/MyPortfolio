@@ -13,31 +13,14 @@ const Curriculum: NextPage = () => {
         option to download my resume in both Spanish and English.
         `}
       </p>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          gap: '50px'
-        }}
-      >
+      <div className='content_buttons'>
         <a
           href={'/CV Luis Eduardo Contreras Mendez C.C.1010145758.pdf'}
           download="CV Luis Eduardo Contreras Mendez C.C.1010145758.pdf"
           target="_blank"
           rel="noreferrer"
-          style={{
-            textDecoration: 'none',
-            color: 'inherit'
-          }}
         >
-          <div
-            style={{
-              border: `2px solid ${color}`,
-              padding: '5px 10px',
-              borderRadius: '5px',
-              cursor: 'pointer'
-            }}
-          >
+          <div style={{ border: `2px solid ${color}` }} >
             <p className={`${title} fs-14`}>{'Download in english'}</p>
           </div>
         </a>
@@ -51,14 +34,7 @@ const Curriculum: NextPage = () => {
             color: 'inherit'
           }}
         >
-          <div
-            style={{
-              border: `2px solid ${color}`,
-              padding: '5px 10px',
-              borderRadius: '5px',
-              cursor: 'pointer'
-            }}
-          >
+          <div style={{ border: `2px solid ${color}` }} >
             <p className={`${title} fs-14`}>{'Download in spanish'}</p>
           </div>
         </a>

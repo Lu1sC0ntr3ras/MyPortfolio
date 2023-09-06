@@ -1,12 +1,13 @@
 @import "../utilities/index.scss";
 
 .left_bar {
-  @include box(250px, 100%, $light_color);
+  @include box(300px, 100%, $light_color);
   @include animation($open_left_bar, 1s);
   position: fixed;
   box-shadow: 0rem 0rem 0.3rem $dark_color;
-  left: -200px;
+  left: -250px;
   z-index: 100;
+
   .left_text {
     @include box(auto, 100%, transparent, 20px);
     @include flex-content(column, auto, auto, 50px);
@@ -40,15 +41,61 @@
 }
 
 .open_bar {
+  @include flex-content(row, center, center);
   @include position(absolute, 0, 0, auto, auto, 100);
-  @include box(25%, 100%);
+  @include box(50px, 100%);
+  padding-top: 20px;
   cursor: pointer;
+  gap: 10px;
+  div {
+    position: relative;
+    width: 3px;
+    height: 70px;
+    border-radius: 3px;
+  }
 }
 
-.appear{
+.appear {
   @include animation($appear_text, 1s);
 }
 
-.vanish{
+.vanish {
   @include animation($vanish_text, 0.5s);
+}
+
+@media (max-width: 600px) {
+  .left_bar {
+    width: 100%;
+    left: 0;
+    @include animation(open_sidebar, 1s);
+    .left_text {
+      p {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  .first_left_bar {
+    @extend .left_bar;
+    left: 0%;
+    top: 95%;
+    animation: none;
+  }
+
+  .left_bar_closed {
+    @extend .left_bar;
+    @include animation(close_sidebar, 1s);
+  }
+
+  .open_bar {
+    @include box(100%, 5%);
+    flex-direction: column;
+    position: relative;
+
+    div {
+      width: 50px;
+      height: 3px;
+    }
+  }
 }

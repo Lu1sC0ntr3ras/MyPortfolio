@@ -1,0 +1,24 @@
+@import "../utilities/index.scss";
+
+.content_buttons {
+  margin-top: 20px;
+  @include flex-content(row, center, center, 50px);
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    div {
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .content_buttons{
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
