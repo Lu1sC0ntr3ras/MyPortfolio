@@ -1,7 +1,7 @@
 {
   "name": "lu1sc0ntr3ras-portfolio",
   "version": "1.0.0",
-  "homepage": "https://lu1sC0ntr3ras.github.io/my-portfolio",
+  "homepage": "https://lu1sC0ntr3ras.github.io/MyPortfolio",
   "private": true,
   "scripts": {
     "dev": "next dev",
