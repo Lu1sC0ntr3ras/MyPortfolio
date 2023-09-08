@@ -5,9 +5,11 @@ const AboutMe: NextPage = () => {
   const { theme: { page, title, text, color } } = useTheme();
 
   return (
-    <div className={page}>
+    <div className={`${page} scroll_y`}>
       <p className={`${title} fs-20`}>{'Who am I?'}</p>
-      <div className='profile_image' style={{ borderColor: color }}/>
+      <div className='image_container'>
+        <div className='profile_image' style={{ borderColor: color }} />
+      </div>
       <p className={`${text} justify`}>
         {`
             I always seek to improve myself, I consider that programming is my field

@@ -1,15 +1,18 @@
 @import "../utilities/index.scss";
-
-.profile_image {
-  @include box(100px, 100px, url("../../../public/assets/profile_image.png"));
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 100%;
-  border: 5px solid #333333;
+.image_container{
+  .profile_image {
+    @include box(100px, 100px, url("../../../public/assets/profile_image.png"));
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+    border: 5px solid #333333;
+  }
 }
 
 @media (max-width: 600px) {
-  .profile_image {
+  .image_container {
     align-self: center;
+    width: 100px;
+    height: 100px;
   }
 }
