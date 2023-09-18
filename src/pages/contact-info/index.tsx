@@ -45,13 +45,26 @@ const ContacInfo: NextPage = () => {
         <div>
           <GitLab fill={color} />
         </div>
-        <p className={`${text} fs-14`}>{'gitlab.com/Lu1sC0ntr3ras'}</p>
+        <a
+          href={'https://gitlab.com/Lu1sC0ntr3ras'}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <p className={`${text} fs-14`}>{'gitlab.com/Lu1sC0ntr3ras'}</p>
+        </a>
       </div>
       <div className='container_contact'>
         <div>
           <GitHub fill={color} />
         </div>
-        <p className={`${text} fs-14`}>{'github.com/Lu1sC0ntr3ras'}</p>
+        <a
+          href={'https://github.com/Lu1sC0ntr3ras'}
+          target="_blank"
+          rel="noreferrer"
+          className={`${text} fs-14`}
+        >
+          <p className={`${text} fs-14`}>{'github.com/Lu1sC0ntr3ras'}</p>
+        </a>
       </div>
     </div>
   );

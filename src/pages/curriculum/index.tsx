@@ -15,8 +15,7 @@ const Curriculum: NextPage = () => {
       </p>
       <div className='content_buttons'>
         <a
-          href={'https://drive.google.com/file/d/1bEv68SDnGc6i9HsqgPoVF7ARHq6JH6dd/view?usp=sharing'}
-          download="CV Luis Eduardo Contreras Mendez C.C.1010145758.pdf"
+          href={'https://drive.google.com/file/d/1g78Js4NOWlk8itxMy-SQkA5Nisfuf8Ej/view?usp=sharing'}
           target="_blank"
           rel="noreferrer"
         >
@@ -25,8 +24,7 @@ const Curriculum: NextPage = () => {
           </div>
         </a>
         <a
-          href={'https://drive.google.com/file/d/1IG0h35M_9TX08tDlY8_XZ4wVTPdXec_D/view?usp=sharing'}
-          download="Hoja de vida Luis Eduardo Contreras Mendez 1010145758.pdf"
+          href={'https://drive.google.com/file/d/11XVWSDWHdl93Fex0NAFBpwAEFtu-bVlC/view?usp=sharing'}
           target="_blank"
           rel="noreferrer"
           style={{
